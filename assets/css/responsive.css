@@ -1,0 +1,402 @@
+/* Big screen :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+
+}
+
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .search_cont h2 {
+        font-size: 48px;
+    }
+    .ctg_blk a{
+    font-size: 35px;
+}
+.nl-right p {
+    font-size: 22px;
+    margin: 130px 0 90px;
+}
+
+.nl_left {
+    height: 600px;
+}
+
+.nl-right {
+    height: 600px;
+}
+
+.service_blk {
+    max-width: 150px;
+}
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .top_menu a {
+        font-size: 15px;
+    }
+    
+    .sub_menu a {
+        font-size: 15px;
+    }
+    
+    .service_blk:after {display: none;}
+
+    .service_wrp {
+        justify-content: space-around;
+    }
+    
+    .service_blk {
+        margin: 20px;
+    }
+    
+    .search_cont h2 {
+        font-size: 36px;
+    }
+    
+    .input_box {
+        max-width: 580px;
+    }
+    
+    .search_cont span {
+        max-width: 570px;
+    }
+    
+    .ctg_blk a {
+        font-size: 30px;
+    }
+    
+    .nl-right h3 {
+        font-size: 26px;
+    }
+    
+    .nl-right p {
+        font-size: 18px;
+        margin: 85px 0 55px;
+    }
+    
+    .nl-right span {
+        font-size: 18px;
+    }
+    
+    .nl-right a {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+    
+    .nl-right {
+        padding: 43px 25px 30px;
+        height: 460px;
+    }
+    
+    .nl_left {
+        height: 460px;
+    }
+    
+    .fkb_text_blk p {
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    
+    section.Feinkorb-text {
+        padding-bottom: 70px;
+    }
+    
+    footer.Footer {
+        /* padding: 70px 0 30px; */
+    }
+    
+    .help_link {
+        /* padding: 60px 10px 30px; */
+    }
+    
+    .help_link a {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .help_link h5 {
+        font-size: 22px;
+        height: 40px;
+    }
+    
+    .pay_card ul {
+        /* justify-content: space-around; */
+    }
+    
+    .social_link h5 {
+        font-size: 18px;
+    }
+    
+    .social_link li a i {
+        font-size: 23px;
+    }
+    
+    span.separet {
+        width: 2px;
+        height: 40px;
+    }
+    
+    .leng h5 {
+        font-size: 20px;
+    }
+    
+    .leng a {
+        font-size: 20px;
+    }    
+    .logo-area {
+        text-align: center;
+    }
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .header-area { 
+        background: #f3f4f475;
+    }
+    .service_blk:after {display: none;}
+
+    .service_wrp {
+        justify-content: space-around;
+    }
+    
+    .service_blk {
+        margin: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .search_cont h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .input_box {
+        max-width: 364px;
+        height: 40px;
+    }
+    
+    .search_cont span {
+        font-size: 10px;
+        max-width: 357px;
+    }
+    
+    .ctg_blk a {
+        font-size: 26px;
+    }
+    
+    .nl-right h3 {
+        font-size: 20px;
+    }
+    
+    .nl-right p {
+        font-size: 16px;
+        margin: 38px 0 29px;
+    }
+    
+    .nl-right span {
+        font-size: 16px;
+    }
+    
+    .nl-right a {
+        font-size: 18px;
+        padding: 13px 25px;
+    }
+    
+    .nl-right {
+        padding: 41px 20px 30px;
+        height: max-content;
+    }
+    
+    .nl_left {
+        height: 300px;
+        flex: 100%;
+    }
+    
+    .fkb_text_blk p {
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    
+    section.Feinkorb-text {
+        padding: 50px 0 10px;
+    }
+    
+    footer.Footer {
+        /* padding: 55px 0 9px; */
+    }
+    
+    .help_link {
+        /* padding: 38px 20px 20px; */
+        display: block;
+    }
+
+.help_link ul {
+    margin-bottom: 30px;
+}
+    
+    .help_link a {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .help_link h5 {
+        font-size: 20px;
+        height: unset;
+        margin-bottom: 20px;
+    }
+    
+    .pay_card ul {
+        /* justify-content: space-around; */
+        flex-wrap: wrap;
+    }
+    
+    .social_link h5 {
+        font-size: 15px;
+    }
+    
+    .social_link li a i {
+        font-size: 20px;
+    }
+    
+    span.separet {
+    width: 100%;
+    height: 1px;
+    margin: 14px 0;
+    max-width: 275px;
+    opacity: .5;
+    }
+    
+    .leng h5 {
+        font-size: 18px;
+    }
+    
+    .leng a {
+        font-size: 18px;
+    }
+    .top_menu {
+        display: none;
+    }
+    
+    .header_btm {
+        display: none;
+    }
+    
+    .nl_wrp {
+        flex-wrap: wrap;
+        max-width: 400px;
+        margin: auto;
+    }
+    
+    .pay_card {
+        width: 100%;
+    }
+    
+    .footer_btm {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .logo-area img {
+        width: 200px;
+    }
+    
+    .main_menu {
+        padding: 10px 0;
+    }
+    
+    section.category {
+        margin: 30px 0;
+    }
+    
+    .input_box button {
+        font-size: 15px;
+        padding:  0 15px;
+    }
+    
+    h2.cck_title {
+        font-size: 28px;
+    }
+    
+    .nl_left img {
+        object-fit: cover;
+    }
+    
+    .nl_left span {
+        font-size: 24px;
+        left: 30px;
+        top: 30px;
+    }
+    
+    .nl_left span:after {
+        width: 50px;
+        height: 50px;
+        left: -14px;
+        top: -27%;
+    }
+    
+    section.news_letter { 
+        padding: 50px 0;
+    }
+    
+    h2.sv_ttl {
+        font-size: 26px;
+    }
+    
+    .service_blk h5 {
+        margin-bottom: 10px;
+    }
+    
+    .service_blk:nth-child(4) h5 {
+        margin-bottom: 15px;
+    }
+    
+    .fkb_text h4 {
+        font-size: 20px;
+    }
+    
+    .fkb_text_blk h5 {
+        font-size: 18px;
+    }
+
+    
+    .leng i {
+        width: 40px;
+        margin: 0 20px;
+    }
+    
+    .leng i img {
+        width: 100%;
+    }
+    .search_cont {
+        margin-bottom: 30px;
+    }
+    .cooking {
+        padding-bottom: 40px;
+    }
+    .footer-top {
+        padding: 60px 25px 30px;
+    }
+    .pay_card ul li a {
+        width: 60px;
+    }
+    .pay_card ul li {
+        margin: 0 10px;
+    }
+
+}
+ 
+/* Large Mobile screen :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+    
+    .help_link {
+    padding-left: 50px;
+}
+ 
+}
