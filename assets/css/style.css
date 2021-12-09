@@ -1,6 +1,12 @@
 /*   Theme default css */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+  --thmColor: #042A2B;
+  --redColor: #860016;
+}
+
+
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -19,7 +25,6 @@ a:focus,
 
 a:focus,
 a:hover {
-  color: inherit;
   text-decoration: none !important;
   }
 
@@ -48,7 +53,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  font-weight: 500; }
+  }
 
 h2 {
   font-size: 35px; }
@@ -72,6 +77,83 @@ ul {
 li {
   list-style: none; }
 
+
+
+  /* Custom radio button css */
+
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+  }
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label
+  {
+      position: relative;
+      padding-left: 27px;
+      cursor: pointer;
+      line-height: 20px;
+      display: inline-block; 
+  }
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #042a2b;
+      border-radius: 100%;
+      background: #fff;
+  }
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: #860016;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+  }
+  [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+
+  /* Alert block */
+  .alert_blk {
+    display: flex;
+    align-items: center;
+    background: #BD737F;
+    padding: 15px 30px;
+    border-radius: 100px;
+}
+
+.alert_blk p {
+    margin: 0;
+    color: #860016;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.alert_blk p i {
+    font-size: 26px;
+    margin-right: 15px;
+}
+
+
  
 /* default-css END 
 ================================== */
@@ -87,6 +169,17 @@ li {
   display: inline-block;
 }
 
+li#hd_mail a {
+    font-size: 20px;
+}
+.logo-area a {
+  display: block;
+  max-width: 100%;
+}
+
+.logo-area a img {
+  max-width: 100%;
+}
 .menu-area nav ul li a {
   font-size: 16px;
   margin-left: 50px;
@@ -127,15 +220,16 @@ li {
     height: 100%;
     display: flex;
     align-items: center;
+    padding-top: 25px;
 }
 
 .menu-area ul {display: flex;align-items: center;}
 
-.top_menu a {
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: underline;
-}
+.top_menu ul li {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+} 
 
 .top_menu:before {content: "";position: absolute;top: 0;left: 0;width: 100%;background: rgba(136, 149, 149, 0.1);height: 50px;z-index: -1;}
 
@@ -173,7 +267,7 @@ a.addrss i {
 .sub_menu a {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
     display: block;
     position: relative;
 }
@@ -184,7 +278,7 @@ a.addrss i {
     width: 10px;
     height: 10px;
     left: 50%;
-    bottom: -30px;
+    bottom: -25px;
     z-index: 9999;
     border-top: 4px solid #860016;
     border-left: 10px solid #860016;
@@ -196,7 +290,7 @@ a.addrss i {
 }
 
 .sub_menu a:hover {
-    opacity: .7;
+    opacity: 1;
 }
 
 .sub_menu ul {
@@ -474,6 +568,8 @@ button.accordion.mg_ac:after {content: "+";font-size: 31px;position: absolute;ri
 }
 .input_box {max-width: 800px;margin: auto;position: relative;display: flex;background: rgba(136, 149, 149, 0.1);border-radius: 5px;height: 50px;overflow: hidden;}
 
+input {max-width: 100%;position: relative;border-radius: 5px;height: 50px;overflow: hidden;border: 1px solid;padding: 10px;}
+
 .input_box button {
     right: 0;
     top: 0;
@@ -489,11 +585,11 @@ button.accordion.mg_ac:after {content: "+";font-size: 31px;position: absolute;ri
     display: block;
     width: 100%;
     height: 100%;
-    background: no-repeat;
+    background: none;
     border: none;
     padding:  0 20px;
 }
-.ctg_blk {position: relative;margin-bottom: 20px;border-radius: 5px;overflow: hidden;z-index: 1;}
+.ctg_blk {position: relative;margin-bottom: 20px;border-radius: 5px;overflow: hidden;z-index: 1;/* background: #860016; *//* width: 100%; *//* height: 100%; */}
 
 .ctg_blk:hover:after {
     width: 100%;
@@ -503,11 +599,14 @@ button.accordion.mg_ac:after {content: "+";font-size: 31px;position: absolute;ri
 
 .ctg_blk i {
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .ctg_blk i img {
     width: 100%;
     object-fit: cover;
+    height: 100%;
 }
 
 .ctg_blk a {
@@ -522,7 +621,7 @@ button.accordion.mg_ac:after {content: "+";font-size: 31px;position: absolute;ri
     width: 100%;
     z-index: 9;
     text-align: center;
-    opacity: 0;
+    /* opacity: 0; */
 }
 .cooking {padding-bottom: 100px;}
 .cck_title {text-align: center;font-weight: 500;margin-bottom: 35px;}
@@ -546,17 +645,23 @@ button.accordion.mg_ac:after {content: "+";font-size: 31px;position: absolute;ri
     top: 60px;
     z-index: 2;
 }
-
+.nl-right-wrp {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
 .nl_left span:after {content: "";position: absolute;left: -35%;top: -45%;width: 100px;height: 100px;background: #042a2b;border-radius: 50%;z-index: -1;}
 .nl-right {color: #fff;background: #042A2B;border-radius: 0px 5px 5px 0px;height: 100%;text-align: center;padding: 60px 30px 40px;display: flex;align-items: center;justify-content: center;}
 
 .nl-right a {
     display: block;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 700;
     background: #fff;
     color: #042A2B;
-    padding: 17px 35px;
+    padding: 12px 30px;
     width: max-content;
     margin: auto;
     border-radius: 5px;
@@ -580,7 +685,7 @@ button.accordion.mg_ac:after {content: "+";font-size: 31px;position: absolute;ri
 
 .nl-right p {
     font-size: 24px;
-    margin-top: 20px;
+    /* margin-top: 120px; */
 }
 
 .nl-right h3 {
@@ -629,6 +734,7 @@ h2.sv_ttl {
 .fkb_text h4 {
     margin-bottom: 50px;
     font-weight: 600;
+    font-size: 28px;
 }
 .fkb_text_blk {margin-bottom: 40px;}
 
@@ -665,12 +771,14 @@ h2.sv_ttl {
     font-size: 24px;
     height: 50px;
 }
-
+.fkb_text_blk p a {
+  text-decoration: underline;
+}
 /* home Page End ============================*/
 
 
 
-/* Footer Page Start ============================*/
+/* Footer Section Start ============================*/
 .Footer {/* padding: 100px 0 40px; */}
 .pay_card {width: max-content;margin: 50px auto;}
 
@@ -733,16 +841,1639 @@ h2.sv_ttl {
     height: 100%;
 }
 .pay_card ul li {
-  margin: 0 20px;
+  margin: 0 15px;
 }
 .pay_card ul li a {
   display: block;
-  width: 80px;
+  width: 40px;
 }
 .pay_card ul li a img{
   width: 100%;
   height: auto;
 }
-/* Footer Page End ============================*/
+/* Footer Section End ============================*/
 
 
+
+/* Choose Store page Start ============================*/
+.hb_sub {padding: 15px 0;background: rgba(136, 149, 149, 0.05);}
+
+.hb_sub a {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.hb_sub li {
+    display: inline-block;
+}
+.src_more {
+}
+
+ul.star li {
+    display: inline-block;
+}
+.src_box_more {display: flex;align-items: center;max-width: 75%;margin: 30px 0;border-bottom: 1px solid rgba(136, 149, 149, 0.2);}
+
+.src_box_more a {
+    margin-right: 15px;
+}
+
+.src_box_more input {
+    width: 100%;
+    border: none;
+}
+.food-store {margin: 0px 0 100px;}
+
+.mpp {width: max-content;margin: auto;}
+
+.mpp h2 {
+    font-size: 40px;
+}
+
+.mpp span {
+    font-size: 24px;
+    font-weight: 500;
+}
+.mf_food {max-width: 249px;padding:  0 15px;padding-bottom: 15px;position: relative;margin-bottom: 20px;transition: .3s;margin-top: 100px;width: 100%;}
+
+.mf_food.active .mf_food_rate {
+    opacity: 1;
+}
+
+.mf_food:hover .mf_food_rate {
+    opacity: 1;
+}
+
+.mf_food:hover a {
+    opacity: 1;
+}
+
+.mf_food:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+}
+
+.mf_food.active .mf_food_cont p {
+}
+
+.mf_food.active {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.mf_food.active a {
+    opacity: 1;
+}
+.mf_food_rate {margin-bottom: 20px;position: absolute;top: -25%;opacity: 0;transition: .5s;}
+
+.mf_food_rate a {
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: 1px solid;
+}
+
+.mf_food_rate ul li {
+    display: inline-block;
+}
+
+.mf_food_rate ul li span {
+    font-size: 10px;
+}
+
+.mf_food_rate ul li a {
+    border: none;
+}
+.mf_food_blk {
+}
+
+.add_mfod {
+    max-width: 80px;
+    width: 100%;
+    margin: auto;
+    background: rgba(136, 149, 149, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    opacity: 0;
+}
+
+
+.add_mfod span {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    width: 45px;
+}
+
+.add_mfod a {
+    background: #042A2B;
+    border-radius: 5px;
+    display: block;
+    font-size: 20px;
+    width: 35px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    height: 32px;
+}
+
+.mf_food_blk i {
+    display: block;
+    width: max-content;
+    margin: 45px auto 20px;
+}
+
+.mf_food_blk span {
+    position: absolute;
+    font-size: 14px;
+}
+
+span.mf_new {
+    font-weight: 700;
+    border: 2px solid #042A2B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 8px;
+    margin-left: -10px;
+}
+
+span.mffb {
+    color: #fff;
+    font-weight: 700;
+    padding: 2px 10px;
+    background: #860016;
+    border-radius: 5px;
+    margin-left: -10px;
+}
+.mf_food_cont a {font-size: 14px;font-weight: 500;}
+
+a.mff_title {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.mf_food_cont {
+    padding-left: 30px;
+}
+
+a.btn_card {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background: #042A2B;
+    border-radius: 5px;
+    padding: 6px 20px;
+    transition: .3s;
+}
+
+.mf_food a.btn_card {
+  opacity: 0;
+}
+.mf_food:hover a.btn_card,.mf_food.active a.btn_card{
+  opacity: 1 ;
+}
+.mf_food_cont p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.mf_food_cont p span {
+    position: unset;
+    text-decoration: line-through;
+    font-size: unset;
+}
+
+.mf_food_cont b {
+    color: #860016;
+}
+
+.mf_food_cont p span {}nm
+.mff_title {
+}
+.s_more {background: #042A2B;color: #ffff;font-weight: 700;padding: 10px 40px;width: max-content;margin-left: auto;display: block;}
+/* Choose Store  page End ============================*/
+
+
+/* Store info page Start ============================*/
+.mf_reviwe {margin-bottom: 100px;}
+
+.mf_reviwe .container {
+    max-width: 1000px;
+}
+
+.mf_reviwe h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.mf_reviwe_cont {
+}
+
+.mf_reviwe_cont p {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 7px;
+}
+.mf_reviwe_right {
+}
+
+.mf_reviwe_right h2 span {
+    display: block;
+    font-size: 25px;
+}
+
+.mf_reviwe_right h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mf_reviwe_right ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 445px;
+}
+
+.mf_reviwe_right ul li p {
+    font-size: 12px;
+}
+
+.mf_reviwe_right ul li span {
+    display: inline-block;
+    max-width: 353px;
+    height: 24px;
+    width: 100%;
+    background: rgba(4, 42, 43, 0.1);
+}
+
+.mf_reviwe_right ul li.active span {
+    background: #FFCE31;
+}
+.reviwe_filter {display: flex;justify-content: space-between;margin: 70px 0 30px;flex-wrap: wrap;align-items: center;}
+
+.reviwe_filter p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.select_box {display: flex;align-items: center;}
+
+.select_box .nice-select {
+    width: 200px;
+}
+
+.select_box .nice-select span {
+    font-size: 18px;
+    font-weight: 700;
+}
+.srt_by {margin-bottom: 0;margin-right: 21px;}
+.user_reviwe {border-bottom: 2px solid rgba(4, 42, 43, 0.1);padding-bottom: 30px;margin-bottom: 30px;}
+
+.bdr_none {
+    border: none;
+}
+
+.user_reviwe p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user_reviwe .star {
+    margin: 20px 0;
+}
+
+.user_reviwe h5 {
+}
+.user_reviwe_info {display: flex;align-items: self-end;}
+
+.user_reviwe_info a {
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.user_reviwe_info a:nth-child(2) {
+    text-decoration: underline;
+}
+
+.user_reviwe_info a i {
+    font-size: 20px;
+}
+
+.user_reviwe_info p {
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 16px;
+}
+.more_user_reviwe {width: max-content;margin: auto;margin-bottom: 30px;}
+
+a.wr_rev {
+    width: max-content;
+    margin: auto;
+    display: block;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 50px;
+    border: 2px solid #042A2B;
+}
+
+.more_user_reviwe a {
+    font-size: 25px;
+    transform: translateY(3px);
+    display: block;
+}
+
+.more_user_reviwe p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 30px;
+}
+
+.more_user_reviwe ul li {
+    display: inline-block;
+}
+section.food-store.store_info .mf_food_cont a {
+    font-size: 18px;
+}
+
+section.food-store.store_info .mf_food_cont p {
+    font-size: 18px;
+}
+section.food-store.store_info .mf_food{
+    max-width: 300px;
+    padding-bottom: 40px;
+    transition: .3s;
+}
+
+.mf_food.active .add_mfod {
+    opacity: 1;
+}
+
+.mf_food:hover .add_mfod {
+    opacity: 1;
+}
+/* Store info page End ============================*/
+
+
+/* Store Product page Start ============================*/
+section.store-product {
+  margin-bottom: 100px;
+}
+.stp_left {margin-top: 35px;}
+.stp_sgl_nev {
+}
+
+.stp_sgl_nev .mbl_mega_menu {
+    padding-left: 20px;
+}
+
+.stp_sgl_nev .mbl_mega_menu ul li a {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.stp_sgl_nev button {font-weight: 700;margin-bottom: 35px;}
+.stp_sgl_nev button.accordion.active {font-weight: 800;}
+.stp_sgl_nev button:after {display: none;}
+.bdr_mfs {border-bottom: 1px solid black;width: max-content;line-height: 18px;}
+
+
+section.store-product .src_box_more {
+  max-width: 100%;
+}
+
+section.store-product .src_more .container {
+  padding: 0;
+}
+
+section.store-product .reviwe_filter {
+  margin: 0;
+}
+
+section.store-product section.food-store .container {
+  padding: 0;
+}
+
+section.store-product section.food-store .container .mf_food {
+  width: 274px;
+  max-width: 290px;
+}
+
+.mf_food.active .mf_food_add_card {
+    opacity: 1;
+}
+
+.mf_food:hover .mf_food_add_card {
+    opacity: 1;
+}
+
+section.store-product section.food-store .container .mf_food a.btn_card {
+  max-width: 210px;
+  margin: 20px auto 10px;
+}
+.stp_pagi_nav{
+    width: max-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.stp_pagi_nav a {
+    font-size: 24px;
+    margin: 0 8px;
+    font-weight: 300;
+    display: inline-block;
+    transition: .3s;
+}
+
+.stp_pagi_nav a:hover {
+}
+
+.stp_pagi_nav a.active {
+    background: rgba(136, 149, 149, 0.1);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.stp_pagi_nav ul li {
+    display: inline-block;
+}
+a.stp_pagi_arrow{
+    margin-left: 40px !important;
+}
+.mf_food_add_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: max-content;
+  margin: auto;
+  opacity: 0;
+}
+
+.mf_food_add_card button {
+  width: 42px;
+  height: 34px;
+  border: none;
+  background: #042A2B;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.mf_food_add_card input {
+  max-width: 120px;
+  text-align: center;
+  height: 34px;
+  border: none;
+  background: #042A2B;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 2px;
+}
+/* Store Product page End ============================*/
+
+
+/* koriander-detail-info page Start ============================*/
+.get_buy {margin-bottom: 150px;}
+.get_buy_left i {width: max-content;display: block;margin: auto;}
+.get_buy_right {max-width: 430px;margin: auto;}
+.gbr_reteing {
+}
+
+.gbr_reteing span {
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.gbr_reteing p {
+    font-size: 12px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+.Bewertungen {font-size: 12px;font-weight: 500;border-bottom: 1px solid;}
+.gbr_title {display: flex;justify-content: space-between;margin: 30px 0 50px;}
+
+.gbr_title h1 {
+    font-size: 30px;
+}
+
+.gbr_title h1 p {
+    font-size: 18px;
+    font-weight: 500;
+}
+.grb_price {display: flex;justify-content: space-between;max-width: 329px;align-items: center;}
+
+.grb_price span {
+    font-size: 30px;
+    font-weight: 700;
+    color: #860016;
+}
+
+.grb_price span small {
+    display: block;
+    font-size: 12px;
+    position: absolute;
+}
+
+span#grb_price_span {
+    font-weight: 400;
+    text-decoration: line-through;
+    color: unset;
+}
+
+span#grb_price_span small {
+}
+.gbr_btn {font-size: 15px;font-weight: 700;background: #042A2B;display: block;text-align: center;margin: 30px 0 20px;color: #fff;padding: 20px 0;}
+.grb_Deliver {text-align: right;background: rgba(136, 149, 149, 0.1);padding: 12px 20px;}
+
+.grb_Deliver li {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+#kdi{
+}
+
+section#kdi .mf_food_cont p {
+    font-size: 18px;
+}
+
+section#kdi .mf_food_cont a {
+    font-size: 18px;
+}
+
+section#kdi .mf_food {
+    max-width: 300px;
+}
+
+section#kdi .mf_food a.btn_card {
+    max-width: 210px;
+    margin: auto;
+    margin-top: 30px;
+}
+.sec_title{
+    text-align: center;
+}
+
+.sec_title h2 {
+    font-size: 40px;
+}
+
+.sec_title span {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.recomend_popup {width: 710px;position: fixed;background: white;margin: auto;left: 50%;top: 5%;padding: 40px;transform: translateX(-50%);z-index: 9;overflow: auto;}
+
+section.recomend_popup h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.close {
+}
+.rcmd_blk {display: flex;justify-content: space-evenly;border-bottom: 1px solid #042A2B;padding-bottom: 40px;margin-bottom: 40px;}
+
+.rcmd_blk i img {
+    width: 80px;
+}
+.rcmd_cont {
+}
+
+.rcmd_cont a {
+    display: block;
+    width: 150px;
+    height: 34px;
+    display: flex;
+    background: var(--thmColor);
+    color: #ffff;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.rcmd_cont h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.rcmd_cont p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.rcmd_cont span {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 15px 0 20px;
+    display: block;
+}
+
+.rcmd_cont small {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+}
+/* koriander-detail-info page End ============================*/
+
+
+/* cash_out page Start ============================*/
+.CashOut_timeLine {margin: 50px 0 130px;}
+
+section.CashOut_timeLine.en_adrs {
+    margin: 0px 0 66px;
+}
+
+section.CashOut_timeLine ul li a {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+section.CashOut_timeLine ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+section.CashOut_timeLine ul:before {content: "";position: absolute;width: 85%;height: 3px;bottom: 16%;left: 49%;background: #dadfdf;transform: translateX(-50%);}
+
+section.CashOut_timeLine ul li span {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    background: #dadfdf;
+    position: relative;
+    border: 5px solid #fff;
+    cursor: pointer;
+}
+
+section.CashOut_timeLine ul li span.active {
+    background: var(--thmColor);
+}
+.cash_out {
+}
+.cashout_blk {
+    margin-bottom: 100px;
+}
+
+.cashout_blk ul li {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cashout_blk ul {
+    margin-bottom: 20px;
+}
+
+.cashout_blk.cashout_blk2 p {
+    margin-top: 80px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cashout_blk.cashout_blk2 p a {
+    border-bottom: 1px solid;
+}
+
+.cashout_blk p {
+    text-align: center;
+    max-width: 380px;
+}
+
+.cashout_blk h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.c_btn {font-size: 18px;font-weight: 700;background: var(--thmColor);display: block;color: #fff;text-align: center;padding: 14px 0;border-radius: 5px;margin-bottom: 15px;max-width: 380px;}
+.yw {background: #FFCD05;}
+/* cash_out page End ============================*/
+
+
+/* Enter Address page Start ============================*/
+.Deliver {margin-bottom: 100px;}
+.Deliver_left {max-width: 500px;}
+
+.Deliver_left h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.dlry_btn {display: flex;justify-content: space-between;align-items: center;margin-bottom: 60px;}
+
+.dlry_btn a {
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid #042A2B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 245px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px  9px;
+}
+
+.dlry_btn a svg {
+    margin-right: 15px;
+}
+
+.dlry_btn a.active {
+    background: #042A2B;
+    color: #fff;
+}
+.Deliver_form {
+}
+
+.Deliver_form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.Deliver_form label input {display: block;width: 100%;border: 0.5px solid #042A2B;box-sizing: border-box;border-radius: 5px;height: 48px;margin-top: 10px;padding: 0 10px;}
+.gender {margin-bottom: 50px;}
+
+.gender a {
+    width: 125px;
+    height: 46px;
+    display: inline-flex;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--thmColor);
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gender a:hover {
+    background: var(--thmColor);
+    color: #fff;
+}
+
+.gender a.active {
+    background: var(--thmColor);
+    color: #fff;
+}
+.w-50 {
+}
+.dlv_input_wrp {display: flex;align-items: flex-end;justify-content: space-between;}
+
+.dlv_input_wrp label:last-child input {text-align: center;font-size: 14px;font-weight: 500;}
+
+.dlv_input_wrp label {
+    width: 110px;
+}
+
+.dlv_input_wrp label:first-child {
+    width: 274px;
+}
+.dlv_checkbox {overflow: hidden;}
+
+.dlv_checkbox label {
+    text-align: left;
+    padding-left: 50px;
+    margin-bottom: 40px;
+    height: auto;
+    display: flex;
+    align-items: revert;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dlv_checkbox label input {
+    display: inline-block;
+}
+.containerr {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerr input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 38px;
+  width: 38px;
+  border-radius: 5px;
+  border: 1px solid rgba(4, 42, 43, 0.3);
+}
+
+/* On mouse-over, add a grey background color */
+.containerr:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  /* background-color: #2196F3; */
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerr input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerr .checkmark:after {
+  left: 13px;
+  top: 3px;
+  width: 12px;
+  height: 23px;
+  border: solid #042a2b;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.containerr {
+}
+.bolder {font-weight: 700 !important;height: 48px !important;display: flex !important;align-items: center !important;margin-bottom: 16px !important;}
+.checkmark {
+}
+.submit_wrp {display: flex;justify-content: space-between;align-items: center;}
+
+.submit_wrp a.py_btn {
+    max-width: 370px;
+}
+
+.submit_wrp a {
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid;
+    display: inline-block;
+}
+a.py_btn {text-align: center;width: 100%;border: none;background: var(--thmColor);color: #fff;font-weight: 700;padding: 15px;border-radius: 5px;display: block;}
+.your_order {max-width: 450px;margin-left: auto;}
+
+.your_order h2 {
+    font-size: 30px;
+    margin: 25px 0 30px;
+}
+.y_order_blk {display: flex;align-items: center;justify-content: space-between;border-bottom: 1px solid rgba(4, 42, 43, 0.1);padding-bottom: 15px;margin-bottom: 15px;}
+
+.y_order_blk span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--redColor);
+}
+.yob {justify-content: space-between;}
+
+.yob p {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.yob a {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.yob a {}
+
+.yob small {
+    display: block;
+    font-size: 10px;
+    font-weight: 300;
+}
+.total_order {
+}
+.total_order_blk {display: flex;justify-content: space-between;}
+
+.total_order_blk small {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.total_order_blk span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.total_order_blk p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* start choice -recipe  page ============================*/
+
+
+.Recipe-header {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.Recipe-header h2{
+  font-size: 36px;
+}
+
+.indian-dahl h2{
+  color:#042A2B ;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.dahl-img {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dahl-img img{
+  width: 100%;
+}
+
+
+
+.dahl-review{
+  margin-top: 15px;
+  align-items: c;
+  display: flex;
+}
+
+.dahl-icon{
+  margin-right: 20px;
+}
+
+.dahl-icon i{
+  font-size: 21px;
+  color: #FFCD05;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.dahl-icon i:last-child{
+  margin-right: 0;
+}
+
+.dahl-img-heart{
+  max-width: 25px;
+  width: 100%;
+  height: 25px;
+  margin-left: auto;
+  transition: all 0.4s ease;
+}
+
+.dahl-img-heart:hover{
+  transform: scale(1.6);
+}
+
+.dahl-ratting{
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+.dahl-review-count{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: -3px;
+}
+
+.dahl-review-count span{
+  display: inline-block;
+  margin-bottom: 3px;
+  border-bottom: 1px solid #737373;
+  transition: all 0.4s ease;
+  line-height: 1;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.indian-dahl {
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+
+
+
+/* choice -recipe section end ============================*/
+
+
+/* start indian recipe ingredients page css ============================*/
+
+
+.indian-recipe-ingredients{
+  padding-bottom: 150px;
+  margin-top: 50px;
+}
+
+section.indian-recipe-ingredients .row {
+    justify-content: space-between;
+}
+
+.indian-recipe-ingredients .row{
+  display: flex;
+}
+
+.left-ingredients{
+  flex: 0 0 66%;
+  max-width: 710px;
+}
+
+.ingredients-content h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.right-ingredients{
+  flex: 0 0 34%;
+}
+
+.ingredients-content img{
+  width: 100%;
+}
+
+.ingredients-content .dahl-review{
+  width: 100%;
+}
+
+.ingredient-1st-paragraph{
+  font-size: 18px;
+  font-weight: 600;
+  color: #042A2B;
+  margin-top: 30px;
+}
+
+.preparation{
+  padding-bottom: 50px;
+}
+
+.preparation h2{
+  font-weight: 700;
+  color: #042A2B;
+  text-transform: capitalize;
+}
+.preparation ul{
+  margin-left: 20px;
+}
+
+.preparation ul li{
+  list-style: number;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.ingredient-header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.ingredient-header h3{
+  font-size: 28px;
+  font-weight: 700;
+  color: #042A2B;
+  margin-right: 50px;
+}
+
+.ingredient-header h3:last-child{
+  margin-left: 30px;
+  margin-right: 0;
+}
+
+.ingredient-icon{
+  font-size: 20px;
+  margin-top: -5px;
+  display: flex;
+  align-items: center;
+}
+
+.ingredient-icon input{
+  padding: 0 0 0 10px;
+  width: 40px;
+  margin-right: -5px ;
+  border: none;
+  background: rgba(136, 149, 149, 0.1);
+  border-radius: 5px;
+}
+
+.ingredient-icon button{
+  background-color: #042A2B;
+  border-radius: 5px;
+  border: none;
+}
+
+.ingredient-icon button i{
+  color: #fff;
+}
+
+.ingredient-table ul li{
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  position: relative;
+}
+
+.ingredient-table span{
+  margin-bottom: 10px;
+}
+
+.ingredient-table .containerr .checkmark {
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+}
+
+.ingredient-table .containerr .checkmark:after {
+    width: 6px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+    left: 5px;
+    top: 1px;
+}
+
+.ingredient-list span:first-child {
+  width: 140px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.ingredient-list span:last-child {
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  text-align: left;
+}
+
+.stock{
+  position: absolute;
+  left: 240px;
+  top: 5px;
+  font-size: 12px;
+  color: #860016;
+}
+
+.ingredient-bottom-header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.ingredient-button-area{
+  text-align: center;
+}
+
+.ingredient-btn{
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #042A2B;
+  color: #f5f5f5;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/*ingredient right part*/
+
+.right-ingredients__header h2{
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+
+
+.single-noodles{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* .single-noodles img{
+  width: 100%;
+} */
+
+.noodles-review{
+  margin-left: 20px;
+}
+
+.noodles-review ul {
+    display: flex;
+    align-items: center;
+}
+
+.noodles-review h3{
+  font-size: 18px;
+  font-weight: 700;
+  color: #042A2B;
+}
+
+.noodles-icon i{
+  color: #FFCE31;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.noodles-icon i:last-child{
+  margin-right: 0;
+}
+
+
+.people-review{
+  padding-top: 70px;
+}
+
+.people-review h3{
+  font-size: 20px;
+  font-weight: 500;
+  color: #042A2B;
+  margin-bottom: 30px;
+}
+
+.people-review h3.person{
+  font-size: 14px ;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-bottom: 5px;
+}
+
+.person-review-icon{
+  margin-bottom: 10px;
+}
+
+.person-review-icon i{
+  color: #FFCD05;
+  margin-right: 5px;
+}
+
+.person-review-icon i:last-child{
+  margin-right: 0;
+}
+
+
+.people-review h4{
+  font-size: 15px;
+  color: #042A2B;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.people-review p{
+  font-size: 12px;
+  font-weight: 700;
+  color: #042A2B;
+}
+
+.like-comment-part{
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+/* end indian recipe ingredients page css and Cart page css started ============================*/
+
+
+
+.hb_sub.carTopFeature ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.hb_sub.carTopFeature ul li {
+  display: flex;
+  align-items: center;
+}
+.hb_sub.carTopFeature ul li img {
+  margin-right: 10px;
+}
+.hb_sub.carTopFeature ul li:last-child img{
+  width: 25px;
+}
+.all_cart_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.all_cart_top a.btn_card {
+  border-radius: 0;
+  text-transform: uppercase;
+}
+.carts tr th {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #042a2b2e;
+}
+
+table {
+  width: 100%;
+}
+
+.carts thead tr th:first-child {
+  text-align: left;
+}
+
+.carts tbody td {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.carts tbody td:first-child {
+  text-align: left;
+}
+
+.productCartsDetails {
+  display: flex;
+  align-items: center;
+}
+
+.productCartsDetails img {
+  height: 100px;
+  display: block;
+  width: auto;
+  margin: 0 60px;
+}
+
+.productCartsDetails .productDetails span {
+  font-weight: 100;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.productCartsDetails .productDetails h4 {font-size: 20px;}
+
+.productCartsDetails .productDetails p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.carts tbody tr td:nth-child(2) > div{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+.carts tbody tr td:nth-child(2) > div .ingredient-icon {
+  margin: 0;
+  margin-right: 20px;
+}
+
+.carts tbody tr td:nth-child(2) > div > button.removeProduct {
+  border: none;
+  background: no-repeat;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: cursive;
+}
+.intotal {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background: #8895952e;
+  padding: 30px;
+}
+
+.deliverFeatures label {
+  margin-right: 20px;
+  font-weight: 600;
+}
+
+.deliverFeatures {
+  margin-bottom: 15px;
+}
+.intotal-right li {
+  display: flex;
+  font-weight: 500;
+}
+
+.intotal-right li span:first-child {
+  width: 150px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.intotal-right li:nth-child(4) span {font-weight: 700;}
+.cartBottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.cartBottom a {
+  border-radius: 0;
+}
+a.btn_card.inactive {
+  color: #042A2B;
+  border: 2px solid #042A2B;
+  background: none;
+}
+a.btn_card.inactive:hover {
+  color: #fff;
+  border: 2px solid #042A2B;
+  background: #042A2B;
+}
+
+
+
+
+
+/* Cart page End and Favourite Page css Start ============================*/
+
+
+.loginarea {
+  padding: 70px 0;
+}
+
+.loginBlk {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #042A2B;
+  padding: 25px;
+}
+
+.loginBlk h3 {
+  margin-bottom: 20px;
+}
+
+.loginBlk {
+  font-weight: 500;
+}
+
+.loginBlk ul li {list-style: disc;margin-left: 20px;margin-bottom: 10px;}
+
+.loginwrp label {
+  display: block;
+  margin-bottom: 15px;
+}
+.loginwrp label input {
+  display: block;
+  width: 400px;
+}
+.formBtm {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.formBtm-wrp a {
+  font-size: 15px;
+}
+
+.formBtm-wrp p {
+  margin-top: 15px;
+  color: #860016;
+  font-size: 15px;
+}
+.formBtm  button {border: 2px solid;padding: 5px 30px;font-weight: 600;background: #fff;}
+.details_payment_more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.paymentSupportBLk {
+  display: block;
+  padding: 30px;
+  border: 1px solid #042a2b;
+  text-align: center;
+}
+
+.paymentSupportBLk ul {
+  display: flex;
+  align-items: center;
+}
+
+.paymentSupportBLk ul li {
+  display: block;
+}
+
+.paymentSupportBLk ul li img {
+  max-width: 45px;
+}
+
+.paymentSupportBLk ul li:nth-child(2) {
+  margin: 0 30px;
+}
+
+.paymentSupportBLk h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.mrDetails {
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+
+.mrDetails p {
+  font-weight: 600;
+}
+.mrDetails p:first-child{
+  margin-right: 50px;
+}
+
+
+
+/* Favourite page End and Profile Page css Start ============================*/
+
+.dasboard_sidebar h3 {
+  font-size: 24px;
+}
+
+.dasboard_sidebar ul > li {position: relative;display: block;margin-bottom: 30px;}
+.dasboard_sidebar ul > li > a .menu-sidebar-icon {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.dasboard_sidebar ul > li > a {
+  display: flex;
+  align-items: center;
+} 
+
+.dasboard_sidebar ul > li > a:hover span,
+.dasboard_sidebar ul > li.active > a span {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.dasboard_sidebar ul > li > ul {
+  display: none;
+  padding-left: 50px;
+}
+
+.dasboard_sidebar ul > li > ul li {
+  margin-top: 10px;
+}
+
+.dasboard_sidebar ul > li.active > ul {
+  display: block;
+}
+
+.dasboard_sidebar ul > li > ul  a:hover i,
+.dasboard_sidebar ul > li > ul a.active i{ 
+  font-weight: 600;
+}
+
+
+/* Cart page End and Favourite Page css Start ============================*/
+/* Cart page End and Favourite Page css Start ============================*/
+
+
+/*  page Start ============================*/
+/*  page End ============================*/
+
+
+/*  page Start ============================*/
+/*  page End ============================*/
