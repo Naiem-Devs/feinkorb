@@ -45,6 +45,9 @@ section.store-product section.food-store .container .mf_food {
 .your_order {
     max-width: 430px;
 }
+.left-ingredients {
+    max-width: 60%;
+}
 
 }
 
@@ -247,6 +250,59 @@ section.Deliver .row {
 .Deliver_left h2 {
     margin-bottom: 20px;
 }
+.left-ingredients {
+    max-width: 60%;
+    flex: 0 0 59%;
+}
+.single-noodles img {
+    max-width: 140px;
+}
+
+.noodles-review h3 {
+    font-size: 16px;
+}
+
+.noodles-review {
+    margin-left: 10px;
+}
+
+.right-ingredients__header h2 {
+    font-size: 20px;
+}
+
+.top_menu ul li {
+    font-size: 16px;
+}
+
+.ingredients-content h2 {
+    font-size: 24px;
+}
+
+.pay_mth {
+    max-width: 450px;
+    margin: auto;
+}
+.ingredient-table label.containerr {
+    transform: translate(58px, 5px);
+}
+section.Deliver.Confirmation .row {
+    flex-direction: column;
+}
+
+.cfrm_blk_wrp {
+    margin: auto;
+}
+
+.cfrm_left {
+    max-width: 500px;
+    margin: auto;
+}
+
+.your_order.cnfr {
+    margin: auto;
+    margin-bottom: 50px;
+}
+
 }
 
  
@@ -365,7 +421,7 @@ section.Deliver .row {
     width: 100%;
     height: 1px;
     margin: 14px 0;
-    max-width: 275px;
+    max-width: 410px;
     opacity: .5;
     }
     
@@ -809,6 +865,152 @@ a.wr_rev {
     section.Deliver {
         margin-bottom: 50px;
     }
+    .left-ingredients {flex: 0 0 100%;}
+
+.single-noodles img {
+    max-width: 175px;
+}
+
+.noodles-review h3 {
+    font-size: 16px;
+    display: block;
+    width: max-content;
+    margin-bottom: 0;
+}
+
+.noodles-review ul li svg {
+    width: 16px;
+    margin: 1px;
+}
+
+.right-ingredients__header h2 {
+    font-size: 20px;
+}
+
+.ingredients-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.ingredient-1st-paragraph {
+    font-size: 16px;
+}
+
+.preparation ul li {
+    font-size: 16px;
+}
+
+.ingredient-bottom-header h2 {
+    font-size: 18px;
+}
+
+.ingredient-btn {
+    font-size: 15px;
+}
+
+.ingredient-bottom-header {
+    padding-bottom: 15px;
+}
+
+h3.rvw {
+    font-size: 22px;
+}
+
+section.indian-recipe-ingredients {
+    padding-bottom: 50px;
+}
+.ingredient-header h3 {
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+.noodles-review {
+    margin-left: 10px;
+}
+.ingredient-list {
+    position: relative;
+}
+
+.ingredient-table span {
+    display: block !important;
+    text-align: left;
+}
+
+span.stock {
+    left: 60px;
+    width: max-content;
+}
+
+.ingredient-table ul li {
+    margin-bottom: 10px;
+}
+
+.ingredient-list span:first-child {
+    width: unset;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.ingredient-header {
+    width: max-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.card_list.show {
+    width: 100%;
+    padding: 10px;
+    max-width: 400px;
+    left: 0;
+}
+
+cart_btn {
+    font-size: 16px;
+}
+
+.cart-btn a {
+    font-size: 15px;
+    height: 40px;
+    border-width: 2px;
+}
+
+.card_input a {
+    width: 120px;
+}
+.pay_mth {
+    max-width: 450px;
+    margin: auto;
+}
+.Secure p {
+    padding: 12px 30px;
+    font-size: 12px;
+    border-radius: 17px;
+}
+
+.Payment_title h2 {
+    font-size: 22px;
+}
+
+.dlv_checkbox label {
+    font-size: 13px;
+}
+.payment_method{
+    margin-bottom: 20px;
+}
+.cfrm_left a {
+    font-size: 14px;
+}
+
+section.Deliver.Confirmation .row {
+    flex-direction: column;
+}
+
+.cfrm_right {
+    margin-top: 35px;
+}
+
+a.frut {
+    display: none;
+}
 
 }
  
@@ -829,6 +1031,17 @@ section.food-store .col-lg-3.col-md-6 {
 
 .mf_food_cont {
     padding-left: 20px;
+}
+.card_list.show{
+    padding: 30px;
+    right: auto;
+    left: 0;
+}
+
+.card_list {
+    right: auto;
+    left: -200px;
+    top: 0;
 }
  
 }
