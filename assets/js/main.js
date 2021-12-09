@@ -41,6 +41,11 @@
     }
   });
 
+  if (document.querySelector('select')) {
+   
+    $('select').niceSelect(); 
+
+  }
  
 
   // accordion

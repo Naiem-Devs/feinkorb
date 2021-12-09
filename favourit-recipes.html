@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Profile</title>
+        <title>Favourit recipes</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<link rel="shortcut icon" type="image/x-icon" href="#">
@@ -324,7 +324,8 @@
             <ul>
                 <li><a href="#"> < Feinkorb / </a></li>
                 <li><a href="#">Account Settings /</a></li>
-                <li><a href="#"> My Profile</a></li> 
+                <li><a href="#"> My Favourites / </a></li> 
+                <li><a href="#"> My Recipes </a></li> 
             </ul>
         </div>
     </div>
@@ -349,10 +350,10 @@
                         <ul>
                             <li><a href="#"><div class="menu-sidebar-icon"><img src="assets/img/user.svg" alt=""></div> <span>My Profile</span></a></li>
                             <li><a href="#"><div class="menu-sidebar-icon"><img src="assets/img/Basket.svg" alt=""></div> <span>My Order</span></a></li>
-                            <li><a href="#"><div class="menu-sidebar-icon"><img src="assets/img/heart.png" alt=""> </div><span>My Favourites</span></a>
+                            <li class="active"><a href="#"><div class="menu-sidebar-icon"><img src="assets/img/heart.png" alt=""> </div><span>My Favourites</span></a>
                             <ul>
-                                <li><a class="active" href="#"><i>My Groceries</i> </a></li>
-                                <li><a href="#"><i>My Recipes</i> </a></li>
+                                <li><a href="#"><i>My Groceries</i> </a></li>
+                                <li><a class="active" href="#"><i>My Recipes</i> </a></li>
                             </ul>
                             </li>
                             <li><a href="#"><div class="menu-sidebar-icon"><img src="assets/img/question.png" alt=""></div> <span>Help</span></a></li>
@@ -363,54 +364,75 @@
                 </div>
                 <div class="col-md-8">
                     <div class="dasboard-content">
-                        <div class="dasboard-profile"> 
-                            <ul>
-                                <li>
-                                    <span>Mrs. or Mr.</span>
-                                    <span>Mr.</span>
-                                </li>
-                                <li>
-                                    <span>First Name</span>
-                                    <span>Max</span>
-                                </li>
-                                <li>
-                                    <span>Last Name</span>
-                                    <span>Mustermann</span>
-                                </li>
-                                <li>
-                                    <span>Date of Birth</span>
-                                    <span>02. January 1988</span>
-                                </li>
-                                <li>
-                                    <span>Email Address</span>
-                                    <span>Max.Mustermann@gmx.com</span>
-                                </li>
-                                <li>
-                                    <span>Mobil Number</span>
-                                    <span>0174444444444</span>
-                                </li>
-                                <li>
-                                    <span>Street</span>
-                                    <span>Mustermann Street 4</span>
-                                </li>
-                                <li>
-                                    <span>Address extension Company name (optional)</span>
-                                    <span> </span>
-                                </li>
-                                <li>
-                                    <span>City</span>
-                                    <span>Berlin</span>
-                                </li>
-                                <li>
-                                    <span>Postcode</span>
-                                    <span>11111</span>
-                                </li>
-                                <li>
-                                    <span>Country</span>
-                                    <span>Germany</span>
-                                </li> 
-                            </ul>
-                            <a href="#" class="btn_card">CHANGE</a>
+                        <div class="dasboard-favourite-groceries">  
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="indian-dahl">
+                                        <h2>Indian Dahl</h2>
+                                        <a href="#" class="dahl-img">
+                                            <img src="./assets/img/recipe.png" alt="recipe-image">
+                                        </a>
+                                        <div class="dahl-review">
+                                            <div class="dahl-icon">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <p class="dahl-ratting">
+                                                4.8/5
+                                            </p>
+                                            <a href="#" class="dahl-review-count"><span> 2 Reviews</span> </a>
+                                            <img src="./assets/img/heart.png" alt="" class="dahl-img-heart">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="indian-dahl">
+                                        <h2>Indian Dahl</h2>
+                                        <a href="#" class="dahl-img">
+                                            <img src="./assets/img/recipe.png" alt="recipe-image">
+                                        </a>
+                                        <div class="dahl-review">
+                                            <div class="dahl-icon">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <p class="dahl-ratting">
+                                                4.8/5
+                                            </p>
+                                            <a href="#" class="dahl-review-count"><span> 2 Reviews</span> </a>
+                                            <img src="./assets/img/heart.png" alt="" class="dahl-img-heart">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="indian-dahl">
+                                        <h2>Indian Dahl</h2>
+                                        <a href="#" class="dahl-img">
+                                            <img src="./assets/img/recipe.png" alt="recipe-image">
+                                        </a>
+                                        <div class="dahl-review">
+                                            <div class="dahl-icon">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <p class="dahl-ratting">
+                                                4.8/5
+                                            </p>
+                                            <a href="#" class="dahl-review-count"><span> 2 Reviews</span> </a>
+                                            <img src="./assets/img/heart.png" alt="" class="dahl-img-heart">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -495,6 +517,10 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>  
         <script src="assets/js/jquery.nice-select.js"></script>  
-        <script src="assets/js/main.js"></script> 
+        <script src="assets/js/main.js"></script>
+        <script>
+            $('#select').niceSelect();
+       </script>
+ 
     </body>
 </html>
