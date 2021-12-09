@@ -1810,7 +1810,7 @@ a.py_btn {text-align: center;width: 100%;border: none;background: var(--thmColor
 
 .Recipe-header {
   text-align: center;
-  margin: 80px 0;
+  margin: 40px 0;
 }
 
 .Recipe-header h2{
@@ -1818,15 +1818,16 @@ a.py_btn {text-align: center;width: 100%;border: none;background: var(--thmColor
 }
 
 .indian-dahl h2{
-  color:#042A2B ;
-  font-size: 38px;
-  margin-bottom: 10px;
+  color:#042A2B;
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
 .dahl-img {
   display: inline-block;
   width: 100%;
   cursor: pointer;
+  max-width: 530px;
 }
 
 .dahl-img img{
@@ -2427,6 +2428,11 @@ a.btn_card.inactive:hover {
 
 /* Favourite page End and Profile Page css Start ============================*/
 
+
+
+.dasboard-area {
+  padding: 70px 0;
+}
 .dasboard_sidebar h3 {
   font-size: 24px;
 }
@@ -2454,6 +2460,7 @@ a.btn_card.inactive:hover {
 }
 
 .dasboard_sidebar ul > li > ul li {
+  margin: 0px;
   margin-top: 10px;
 }
 
@@ -2465,6 +2472,35 @@ a.btn_card.inactive:hover {
 .dasboard_sidebar ul > li > ul a.active i{ 
   font-weight: 600;
 }
+.dasboard_section_title {
+  margin-bottom: 50px; 
+}
+.dasboard-profile ul li {
+  display: flex;
+}
+
+.dasboard-profile ul li span:first-child {
+  width: 205px;
+  font-weight: 600;
+}
+
+.dasboard-profile ul li {
+  margin-bottom: 10px;
+}
+
+.dasboard-profile a.btn_card {
+  margin-top: 35px;
+  width: max-content;
+  border-radius: 0;
+}
+
+
+
+
+
+
+
+
 
 
 /* Cart page End and Favourite Page css Start ============================*/
