@@ -5,7 +5,21 @@
   $('.siteBar-btn').click( function (){ 
     $('.mobile-menu').toggleClass('siteBar');   
   }); 
+<<<<<<< HEAD
  
+=======
+  
+  $('.cart_btn').click( function (){ 
+    $('.card_list').addClass('show');   
+  }); 
+  $('.cls_card').click( function (){ 
+    $('.card_list').removeClass('show');   
+  }); 
+
+  
+  
+  console.log(""); 
+>>>>>>> 71407c665a7950fa904d4c9385884412ca7973e5
 
   // owlCarousel
   $(".brand-active").owlCarousel({
@@ -77,4 +91,43 @@
 
 
 
+<<<<<<< HEAD
+=======
+  const rdoBtn = document.querySelectorAll('.card_opt a')
+
+  rdoBtn.forEach(rdoBtns => {
+    rdoBtns.addEventListener('click', () => {
+      removeRedCircle()
+      rdoBtns.classList.add('active')
+    })
+  })
+
+  function removeRedCircle() {
+    rdoBtn.forEach(rdoBtns => {
+      rdoBtns.classList.remove('active')
+    })
+  }
+ 
+
+  const ardoBtn = document.querySelectorAll('.accordion-button')
+
+  ardoBtn.forEach(ardoBtns => {
+    ardoBtns.addEventListener('click', () => {
+      aremoveRedCircle()
+      ardoBtns.classList.add('active')
+    })
+  })
+
+  function aremoveRedCircle() {
+    ardoBtn.forEach(ardoBtns => {
+      ardoBtns.classList.remove('active')
+    })
+  }
+ 
+
+
+
+
+
+>>>>>>> 71407c665a7950fa904d4c9385884412ca7973e5
 })(jQuery);
