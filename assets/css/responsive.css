@@ -54,7 +54,21 @@ section.store-product section.food-store .container .mf_food {
     .top_menu a {
         font-size: 15px;
     }
-    
+    .header-two a.header-logo { 
+        font-size: 13px;
+    }
+    .header-two a.header-logo img {
+        max-width: 160px;
+    }
+    .header-two a.header-logo span {
+        margin-left: 10px; 
+        top: 9px;
+    }
+
+    .h_two_menu a {
+        padding: 7px 12px;
+        margin-left: 11px; 
+    }
     .sub_menu a {
         font-size: 15px;
     }
@@ -247,6 +261,43 @@ section.Deliver .row {
 .Deliver_left h2 {
     margin-bottom: 20px;
 }
+.intotal { 
+    justify-content: center; 
+    flex-wrap: wrap;
+    text-align: center;
+}
+.ingredient-icon input  { 
+    height: 33px; 
+    padding-bottom: 5px;
+}
+
+.hb_sub.carTopFeature ul {
+    flex-wrap: wrap;
+} 
+.hb_sub.carTopFeature {
+    padding-top: 5px;
+} 
+.hb_sub.carTopFeature ul li {
+    padding-top: 10px;
+}
+.mrDetails p:first-child {
+    margin-right: 10px;
+    margin-left: 10px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
  
@@ -256,7 +307,20 @@ section.Deliver .row {
         background: #f3f4f475;
     }
     .service_blk:after {display: none;}
-
+    .h_two_menu {  
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    .h_two_menu a {
+        margin: 0;
+        margin-top: 15px;
+    }
+    .header-two a.header-logo span{
+        display: none;
+    }
+    .header-two a.header-logo img {
+        max-width: 180px;
+    }
     .service_wrp {
         justify-content: space-around;
     }
@@ -809,6 +873,175 @@ a.wr_rev {
     section.Deliver {
         margin-bottom: 50px;
     }
+
+
+
+    .intotal { 
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+    .ingredient-icon input  { 
+        height: 33px; 
+        padding-bottom: 5px;
+    }
+    .thetble {
+        overflow: auto;
+    }
+    
+    .productCartsDetails img {
+        margin: 0 20px;
+        margin-left: 0;
+    }
+    
+    .thetble table {
+        width: 500px;
+    }
+    .deliverFeatures label { 
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    a.btn_card { 
+        padding: 6px 11px; 
+        font-size: 15px;
+    }
+    .hb_sub.carTopFeature ul {
+        flex-wrap: wrap;
+    } 
+    .hb_sub.carTopFeature {
+        padding-top: 5px;
+    } 
+    .hb_sub.carTopFeature ul li {
+        padding-top: 10px;
+    }
+    .loginBlk { 
+        flex-wrap: wrap;
+    }
+    .loginwrp label input {
+        display: block;
+        width: 100%;
+        height: 40px;
+    }
+    .formBtm {
+        flex-wrap: wrap;
+        margin-top: 15px;
+        flex-direction: column-reverse;
+    }
+    .formBtm-wrp {
+        margin-top: 10px;
+    }
+    .formBtm-wrp p {
+        margin: 0;  
+    }
+    .details_payment_more { 
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    .mrDetails { 
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+    .dasboard-profile ul li {
+        display: block;
+        text-align: center;
+    }
+    .dasboard-profile ul li span{
+        display: block;
+    }
+    .dasboard-profile ul li span:first-child {
+        width: 100%; 
+    }
+    .dasboard-profile a.btn_card {
+        margin: auto;
+        margin-top: 35px; 
+    }
+    .dasboard-area {
+        padding: 40px 0;
+    }
+    .dasboard-order {
+        overflow: auto;
+    }
+    
+    .dasboard-order table {
+        width: 500px;
+    }
+    .dahl-icon i {
+        font-size: 16px; 
+        margin-right: 0px; 
+    }
+    .indian-dahl {
+        margin-bottom: 30px; 
+    }
+    .dasboard-notification ul li{
+        display: block;
+    }
+    .modal-body {
+        padding: 15px; 
+    }
+body{
+    font-size: 14px;
+}
+.modal-header h5 {
+    font-size: 26px;
+    margin: 0;
+}
+.modal-header {
+    padding: 15px;
+    padding-top: 40px;
+    padding-bottom: 5px;
+}
+.modal-header button.btn-close {
+    width: 15px;
+    height: 15px; 
+    right: 20px;
+    top: 18px;
+}
+input { 
+    height: 40px; 
+}
+.tos-area {
+    padding: 30px 0;
+}
+.help-center-banner {
+    padding: 60px 0;
+    padding-top: 100px; 
+}
+.help-center-banner h1 {
+    font-size: 32px;
+    line-height: 33px;
+}
+.helpOptions .help-single-blk {
+    width: 245px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.help-center-area {
+    margin-top: 60px;
+}
+.help-details-wrp { 
+    padding: 30px; 
+    margin: 50px 0;
+} 
+.help-details-wrp h4 { 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.faq-wrps h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.help-center-contents {
+    padding: 50px 0; 
+}
+
+
+
+
+
+
+
+
 
 }
  

@@ -2368,7 +2368,9 @@ a.btn_card.inactive:hover {
 .loginarea {
   padding: 70px 0;
 }
-
+.registerDetails {
+  padding-right: 10px;
+}
 .loginBlk {
   display: flex;
   align-items: center;
@@ -2654,10 +2656,84 @@ a.btn_card.inactive:hover {
 /* Tos pages End and Help-center Pages css Start ============================*/
 
 
+.header-two a.header-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+.header-two {
+  padding: 20px 0;
+}
+.header-two a.header-logo img {
+  max-width: 230px;
+}
+.header-two a.header-logo span {
+  margin-left: 15px;
+  position: relative;
+  top: 15px;
+
+}
+.mmtwo{
+  background: #ffffff;
+  color: #042A2B
+}
+.h_two_menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.h_two_menu a {
+  padding: 7px 30px;
+  margin-left: 20px;
+  border: 2px solid #042A2B;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.h_two_menu a:hover {
+  background: #042A2B;
+  color: #fff;
+}
+
+.changeCountry {
+  position: relative;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #042A2B;
+  padding-left: 7px;
+  justify-content: space-between;
+}
+
+.changeCountry img {
+  max-width: 35px;
+}
+
+.changeCountry  .nice-select {
+  height: 38px;
+  background: none;
+  color: #042A2B;
+  font-weight: 700;
+  padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .help-center-banner {
   padding: 130px 0;
-  padding: 200px;
+  padding-top: 200px;
   color: #fff;
   font-style: italic;
 }
@@ -2706,6 +2782,7 @@ a.btn_card.inactive:hover {
 .helpOptions {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .helpOptions .help-single-blk {
