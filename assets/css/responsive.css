@@ -1024,9 +1024,17 @@ span.stock {
 }
 .card_list.show {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     max-width: 400px;
     left: 0;
+    height: 100vh;
+    position: fixed;
+}
+
+.card_list {
+    left: -300px;
+    top: 0;
+    right: auto;
 }
 
 cart_btn {

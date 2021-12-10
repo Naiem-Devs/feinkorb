@@ -6,7 +6,18 @@
     $('.mobile-menu').toggleClass('siteBar');   
   }); 
   
-  $('.cart_btn').click( function (){ 
+
+// Cart Item menu 
+  const cardBtn = document.querySelectorAll('.menu-area ul li a')
+  const cardBtnSelect = cardBtn[cardBtn.length - 1]
+  const mcardBtn = document.querySelector('.mbl_last ul li a')
+  // const mcardBtnSelect = mcardBtn[mcardBtn.length -]
+
+
+  $(cardBtnSelect).click( function (){ 
+    $('.card_list').addClass('show');   
+  }); 
+  $(mcardBtn).click( function (){ 
     $('.card_list').addClass('show');   
   }); 
   $('.cls_card').click( function (){ 
@@ -14,8 +25,6 @@
   }); 
 
   
-  
-  console.log(""); 
 
   // owlCarousel
   $(".brand-active").owlCarousel({
@@ -41,10 +50,9 @@
     }
   });
 
+  // Nice Select
   if (document.querySelector('select')) {
-   
     $('select').niceSelect(); 
-
   }
  
 
@@ -64,8 +72,9 @@
     });
   }
 
-  const rdoBtn = document.querySelectorAll('.card_opt a')
 
+  // select Circle Created
+  const rdoBtn = document.querySelectorAll('.card_opt a')
   rdoBtn.forEach(rdoBtns => {
     rdoBtns.addEventListener('click', () => {
       removeRedCircle()
@@ -79,7 +88,6 @@
     })
   }
  
-
   const ardoBtn = document.querySelectorAll('.accordion-button')
 
   ardoBtn.forEach(ardoBtns => {
@@ -94,9 +102,6 @@
       ardoBtns.classList.remove('active')
     })
   }
- 
-
-
 
 
 

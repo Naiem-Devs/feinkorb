@@ -77,6 +77,12 @@ ul {
 li {
   list-style: none; }
 
+  ::-webkit-scrollbar{
+    width: 10px;
+}
+  ::-webkit-scrollbar-thumb{
+    background: var(--thmColor);
+}
 
 
   /* Custom radio button css */
@@ -267,6 +273,7 @@ li#hd_mail a {
   font-size: 18px;
   font-weight: 600;
   text-decoration: underline;
+  cursor: pointer;
 } 
 
 .top_menu:before {content: "";position: absolute;top: 0;left: 0;width: 100%;background: rgba(136, 149, 149, 0.1);height: 50px;z-index: -1;}
@@ -277,7 +284,7 @@ li#hd_mail a {
     align-items: center;
     flex-wrap: wrap;
 }
-.logo-area {/* text-align: center; */}
+
 
 .addrss {padding: 8px 10px;background: rgba(136, 149, 149, 0.1);border-radius: 5px;}
 
@@ -285,11 +292,6 @@ a.addrss i {
     margin-left: 5px;
 }
 .header_btm {border-bottom: 2px solid #860016;}
-.sub_menu {
-}
-
-.sub_menu li {
-}
 
 .sub_menu li:hover a:after {
     opacity: 1;
@@ -376,9 +378,6 @@ a.addrss i {
 .sub_menu .mega_menu ul {
     display: block;
 }
-
-.sub_menu .mega_menu {}
-
 
 /* humbergar */
 .bar {
@@ -529,21 +528,17 @@ button.accordion.mg_ac:after {content: "+";font-size: 31px;position: absolute;ri
     position: relative;
 }
 
-.mbl_last {}
-
 .mbl_last li {
     margin-bottom: 20px;
 }
 
-.mbl_last li {}
 
 .mbl_last li svg {
     margin-right: 10px;
     width: 50px;
 }
 
-.mbl_menu li {
-}
+
 
 .mbl_last path {
     fill: #fff;
@@ -562,9 +557,6 @@ button.accordion.mg_ac:after {content: "+";font-size: 31px;position: absolute;ri
 .mbl_menu ul h5 {
     font-weight: 500;
     font-size: 18px;
-}
-
-.active, .accordion:hover {
 }
 
 .panel {
@@ -712,7 +704,6 @@ input {max-width: 100%;position: relative;border-radius: 5px;height: 50px;overfl
 .ctg_blk:hover a {
   opacity: 1;
 }
-.nl-right a {}
 
 .nl-right span {
     font-size: 24px;
@@ -766,8 +757,7 @@ h2.sv_ttl {
     margin-bottom: 15px;
 }
 .Feinkorb-text {background: rgba(200, 148, 156, 0.15);text-align: center;padding: 100px 0;}
-.fkb_text {
-}
+
 
 .fkb_text h4 {
     margin-bottom: 50px;
@@ -831,8 +821,7 @@ h2.sv_ttl {
     justify-content: center;
 }
 .footer_btm {display: flex;justify-content: center;background: rgba(136, 149, 149, 0.1);padding: 35px 0;}
-.social_link {
-}
+
 
 .social_link li a i {
     font-size: 30px;
@@ -853,8 +842,7 @@ h2.sv_ttl {
     height: 100%;
 }
 .separet {width: 3px;height: 55px;background: #042A2B;margin: 0 30px;}
-.leng {
-}
+
 
 .leng a {
     text-decoration: underline;
@@ -904,8 +892,7 @@ h2.sv_ttl {
 .hb_sub li {
     display: inline-block;
 }
-.src_more {
-}
+
 
 ul.star li {
     display: inline-block;
@@ -952,8 +939,6 @@ ul.star li {
     border-radius: 5px;
 }
 
-.mf_food.active .mf_food_cont p {
-}
 
 .mf_food.active {
     background: rgba(255, 255, 255, 0.1);
@@ -983,9 +968,6 @@ ul.star li {
 .mf_food_rate ul li a {
     border: none;
 }
-.mf_food_blk {
-}
-
 .add_mfod {
     max-width: 80px;
     width: 100%;
@@ -1091,9 +1073,6 @@ a.btn_card {
     color: #860016;
 }
 
-.mf_food_cont p span {}nm
-.mff_title {
-}
 .s_more {background: #042A2B;color: #ffff;font-weight: 700;padding: 10px 40px;width: max-content;margin-left: auto;display: block;}
 /* Choose Store  page End ============================*/
 
@@ -1109,15 +1088,11 @@ a.btn_card {
     font-size: 30px;
     margin-bottom: 50px;
 }
-.mf_reviwe_cont {
-}
 
 .mf_reviwe_cont p {
     font-size: 25px;
     font-weight: 500;
     margin-top: 7px;
-}
-.mf_reviwe_right {
 }
 
 .mf_reviwe_right h2 span {
@@ -1185,8 +1160,7 @@ a.btn_card {
     margin: 20px 0;
 }
 
-.user_reviwe h5 {
-}
+
 .user_reviwe_info {display: flex;align-items: self-end;}
 
 .user_reviwe_info a {
@@ -1264,8 +1238,6 @@ section.store-product {
   margin-bottom: 100px;
 }
 .stp_left {margin-top: 35px;}
-.stp_sgl_nev {
-}
 
 .stp_sgl_nev .mbl_mega_menu {
     padding-left: 20px;
@@ -1332,8 +1304,6 @@ section.store-product section.food-store .container .mf_food a.btn_card {
     transition: .3s;
 }
 
-.stp_pagi_nav a:hover {
-}
 
 .stp_pagi_nav a.active {
     background: rgba(136, 149, 149, 0.1);
@@ -1385,8 +1355,11 @@ a.stp_pagi_arrow{
 
 
 /* koriander-detail-info page Start ============================*/
-.card_list {position: absolute;top: 0;background: #fff;z-index: 9;width: 500px;padding: 30px;visibility: hidden;right: 0;top: -100px;transition: .4s;}
+.card_list {position: absolute;top: 0;background: #fff;z-index: 9;width: 500px;padding: 30px;visibility: hidden;right: 0;top: -100px;transition: .4s;height: 100vh;overflow: auto;box-shadow: -7px 20px 20px 20px rgb(0 0 0 / 8%);}
 
+.card_list::-webkit-scrollbar{
+  display: none;
+}
 .card_list.show {
     visibility: visible;
     right: 0;
@@ -1400,8 +1373,6 @@ a.stp_pagi_arrow{
 }
 .cls_card {font-size: 20px;font-weight: 600;}
 .card_blk {display: flex;justify-content: space-between;padding-bottom: 15px;border-bottom: 1px solid rgba(4, 42, 43, 0.1);margin-bottom: 15px;align-items: center;}
-.card_cont {
-}
 
 .card_cont h4 {
     font-size: 14px;
@@ -1427,10 +1398,12 @@ a.stp_pagi_arrow{
     margin-bottom: 10px;
 }
 
+.subtotal_card p a {
+    transition: unset;
+}
+
 .Subtotal_Prc ul li {
     display: flex;
-}
-.Subtotal_Prc {
 }
 
 ul.Subtotal_Prc li {
@@ -1441,8 +1414,7 @@ ul.Subtotal_Prc li {
 ul.Subtotal_Prc li small {
     margin-bottom: 10px;
 }
-.card_opt {
-}
+.card_opt {margin-top: 10px;}
 
 .card_opt p {
     margin-bottom: 0;
@@ -1477,6 +1449,7 @@ ul.Subtotal_Prc li small {
     margin-bottom: 5px;
     font-size: 14px;
     font-weight: 500;
+    transition: unset;
 }
 
 .card_opt a.active i:after {
@@ -1511,6 +1484,7 @@ ul.Subtotal_Prc li small {
     width: 140px;
     justify-content: center;
     line-height: 0;
+    transition: unset;
 }
 
 .card_input input {
@@ -1536,6 +1510,7 @@ ul.Subtotal_Prc li small {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    transition: unset;
 }
 a.CART {border: 3px solid var(--thmColor);background: #fff !important;color: var(--thmColor);}
 .add_num{
@@ -1577,9 +1552,6 @@ a.CART {border: 3px solid var(--thmColor);background: #fff !important;color: var
 .get_buy {margin-bottom: 150px;}
 .get_buy_left i {width: max-content;display: block;margin: auto;}
 .get_buy_right {max-width: 430px;margin: auto;}
-.gbr_reteing {
-}
-
 .gbr_reteing span {
     font-size: 12px;
     margin: 0 10px;
@@ -1621,8 +1593,6 @@ span#grb_price_span {
     color: unset;
 }
 
-span#grb_price_span small {
-}
 .gbr_btn {font-size: 15px;font-weight: 700;background: #042A2B;display: block;text-align: center;margin: 30px 0 20px;color: #fff;padding: 20px 0;}
 .grb_Deliver {text-align: right;background: rgba(136, 149, 149, 0.1);padding: 12px 20px;}
 
@@ -1630,8 +1600,6 @@ span#grb_price_span small {
     font-size: 12px;
     font-weight: 500;
     margin: 5px 0;
-}
-#kdi{
 }
 
 section#kdi .mf_food_cont p {
@@ -1696,14 +1664,10 @@ section.recomend_popup h2 {
     text-align: center;
     margin-bottom: 40px;
 }
-.close {
-}
 .rcmd_blk {display: flex;justify-content: space-evenly;border-bottom: 1px solid #042A2B;padding-bottom: 40px;margin-bottom: 40px;}
 
 .rcmd_blk i img {
     width: 80px;
-}
-.rcmd_cont {
 }
 
 .rcmd_cont a {
@@ -1789,8 +1753,7 @@ section.CashOut_timeLine ul li span {
 section.CashOut_timeLine ul li span.active {
     background: var(--thmColor);
 }
-.cash_out {
-}
+
 .cashout_blk {
     margin-bottom: 100px;
 }
@@ -1866,10 +1829,6 @@ section.CashOut_timeLine ul li span.active {
     margin-left: 10px;
 }
 
-.payment_method .accordion-item {
-    /* border-bottom: 1px solid rgba(4, 42, 43, 0.1); */
-}
-
 .payment_method .accordion-button::after {
     display: none;
 }
@@ -1904,8 +1863,7 @@ section.CashOut_timeLine ul li span.active {
     background: #042A2B;
     color: #fff;
 }
-.Deliver_form {
-}
+
 
 .Deliver_form label {
     display: block;
@@ -1937,8 +1895,6 @@ section.CashOut_timeLine ul li span.active {
 .gender a.active {
     background: var(--thmColor);
     color: #fff;
-}
-.w-50 {
 }
 .dlv_input_wrp {display: flex;align-items: flex-end;justify-content: space-between;}
 
@@ -2005,10 +1961,6 @@ section.CashOut_timeLine ul li span.active {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  /* background-color: #2196F3; */
-}
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -2086,8 +2038,6 @@ a.py_btn {text-align: center;width: 100%;border: none;background: var(--thmColor
     display: block;
     font-size: 10px;
     font-weight: 300;
-}
-.total_order {
 }
 .total_order_blk {display: flex;justify-content: space-between;}
 
@@ -2540,9 +2490,6 @@ h3.rvw {
     width: 20px;
 }
 
-.people-review h3{
-}
-
 .people-review h3.person{
   font-size: 14px ;
   font-weight: 700;
@@ -2927,14 +2874,13 @@ a.btn_card.inactive:hover {
 
 
 
-<<<<<<< HEAD
 /* Confirmetion page Start ============================*/
 .cfrm_right {
   height: 100%;
   display: flex;
   align-items: center;
   position: relative;
-=======
+}
  
 
 
@@ -2958,7 +2904,6 @@ a.btn_card.inactive:hover {
 
 .dasboard-order table tbody tr td:first-child {
   padding-left: 45px;
->>>>>>> 08309ca74ebcf5a7e2928e04a6aea283a11e099c
 }
 
 .cfrm_blk_wrp {width: 480px;margin-left: auto;}
@@ -2976,7 +2921,6 @@ a.btn_card.inactive:hover {
     border-radius: 5px;
 }
 
-.cfrm_blk i svg {}
 
 .cfrm_blk a {
     font-size: 14px;
@@ -2996,7 +2940,6 @@ a.btn_card.inactive:hover {
   max-width: 530px;
 }
 
-<<<<<<< HEAD
 .cfrm_left {
   text-align: center;
 }
@@ -3013,7 +2956,6 @@ a.frut {
   right: 0;
 }
 /* Confirmetion page End ============================*/
-=======
 
 /* Order page End and Favourite-groceries Page css Start ============================*/
 
@@ -3334,7 +3276,6 @@ a.frut {
 
 /*  page Start ============================*/
 /*  page End ============================*/
->>>>>>> 08309ca74ebcf5a7e2928e04a6aea283a11e099c
 
 
 /*  page Start ============================*/
