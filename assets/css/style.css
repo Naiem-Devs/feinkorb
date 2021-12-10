@@ -153,8 +153,46 @@ li {
     margin-right: 15px;
 }
 
+/* Stwitch */
 
- 
+.Main_switch .switch {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  background: #dfd9ea;
+  transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.Main_switch .switch::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background: #fafafa;
+  border-radius: 50%;
+  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.Main_switch .switch:active::before {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(128,128,128,0.1);
+}
+.Main_switch input:checked + .switch {
+  background: rgba(136, 149, 149, 0.1);
+}
+.Main_switch input:checked + .switch::before {
+  left: 27px;
+  background: #042A2B;
+}
+.Main_switch input:checked + .switch:active::before {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
+}
+
+
+
 /* default-css END 
 ================================== */
  
@@ -2496,6 +2534,30 @@ a.btn_card.inactive:hover {
 
 
 
+ 
+
+
+/* Profile page End and Order Page css Start ============================*/
+
+
+
+ 
+
+
+.dasboard-order table thead {
+  background: #F9FAFA;
+}
+
+.dasboard-order table thead tr th {
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.dasboard-order table tbody tr td {padding: 15px;}
+
+.dasboard-order table tbody tr td:first-child {
+  padding-left: 45px;
+}
 
 
 
@@ -2503,6 +2565,245 @@ a.btn_card.inactive:hover {
 
 
 
+
+/* Order page End and Favourite-groceries Page css Start ============================*/
+
+
+
+.dasboard-favourite-groceries .mf_food {
+  padding-top: 1px;
+  margin-top: 0px;
+
+}
+
+.dasboard-favourite-groceries .mf_food span.favourite_icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+ 
+
+/* Favourite Grocerie page End and Help Page css Start ============================*/
+
+
+
+.dasboard-help h5 {
+  margin-bottom: 20px;
+}
+.dasboard-help a.btn_card {
+  width: max-content;
+  margin: 40px auto;
+  border-radius: 0;
+  padding: 15px 60px;
+  font-size: 20px;
+  border: 3px solid #860016;
+  background: #fff;
+  color: #042A2B;
+}
+
+
+/* Help page End and Notification Page css Start ============================*/
+
+
+.dasboard-notification ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dasboard-notification ul li span:first-child {
+  width: 210px;
+}
+
+
+
+/* Notification page End and TOS Pages css Start ============================*/
+
+
+.tos-area {
+  padding: 60px 0;
+}
+.tos-wrp h5.rdr {
+    position: relative;
+    padding-left: 15px;
+    color: #860016;
+}
+
+.tos-wrp h5.rdr:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #860016;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+.tos-wrp ul.lists {
+    margin-bottom: 30px;
+}
+.tos-wrp ul.lists li {
+    list-style: disc;
+    margin-top: 2px;
+    margin-left: 30px;
+}
+ 
+
+
+/* Tos pages End and Help-center Pages css Start ============================*/
+
+
+
+.help-center-banner {
+  padding: 130px 0;
+  padding: 200px;
+  color: #fff;
+  font-style: italic;
+}
+
+.help-center-banner h1 {
+  font-size: 48px;
+}
+.help-center-banner h1::first-letter{
+  font-size: 130%;
+}
+.help-single-blk {
+  padding: 20px;
+  border: 2px solid #042A2B;
+  text-align: center;
+  display: block;
+  transition: .3s;
+}
+
+.help-single-blk h5 {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.help-single-blk:hover {
+  background: #860016;
+  color: #fff;
+}
+.help-details-wrp {
+  text-align: center;
+  padding: 50px;
+  background: #042a2b2b;
+  margin: 100px 0;
+}
+
+.help-details-wrp h4 {
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+.help-details-wrp p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.helpOptions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.helpOptions .help-single-blk {
+  width: 31%;
+  margin-bottom: 35px;
+}
+.helpOptions.second {
+  justify-content: center;
+}
+
+.helpOptions.second .help-single-blk {
+  margin: 0 25px;
+  margin-bottom: 30px;
+}
+.help-center-area {
+  margin-top: 100px;
+}
+.help-center-contents {
+  padding: 80px 0;
+  font-style: italic;
+}
+.faq-wrps h3 {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.faqBlk {
+  padding: 30px 0;
+  border-bottom: 1px solid #042A2B;
+  font-style: italic;
+}
+
+.faqBlk h4 {
+  color: #860016;
+  font-weight: 500;
+}
+
+.faqBlk p:last-child {
+  margin: 0;
+}
+.faqBlk:last-child{
+  border: none;
+}
+.help-center-contents.forgot-password .faq-wrps h4 {
+  margin-bottom: 30px;
+}
+
+.help-center-contents.forgot-password .faq-wrps form {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.help-center-contents.forgot-password .faq-wrps form label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.help-center-contents.forgot-password .faq-wrps form label input {
+  height: 40px;
+  border-radius: 0;
+  margin-left: 30px;
+}
+
+.help-center-contents.forgot-password .faq-wrps form button {
+  border: none;
+  background: #860016;
+  padding: 7px 30px;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 600;
+}
+.faq-wrps h3::first-letter{ 
+  font-size: 125%; 
+}
+
+
+
+.footer-two {
+  background: #860016;
+  color: #fff;
+  padding: 50px 0;
+  font-weight: 600;
+}
+
+.footer-two ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-two ul li {
+  margin-right: 30px;
+}
+/* Cart page End and Favourite Page css Start ============================*/
+/* Cart page End and Favourite Page css Start ============================*/
+/* Cart page End and Favourite Page css Start ============================*/
+/* Cart page End and Favourite Page css Start ============================*/
 /* Cart page End and Favourite Page css Start ============================*/
 /* Cart page End and Favourite Page css Start ============================*/
 
@@ -2513,3 +2814,130 @@ a.btn_card.inactive:hover {
 
 /*  page Start ============================*/
 /*  page End ============================*/
+
+
+
+
+
+
+
+
+
+ 
+.modal-dialog {
+  max-width: 700px;
+}
+.modal-header {
+    text-align: center;
+    position: relative;
+    border: none;
+    padding: 30px;
+    display: block;
+}
+
+.modal-header h5 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.modal-header button.btn-close {
+    width: 25px;
+    height: 25px;
+    border: 2px solid  #042A2B;
+    border-radius: 50%;
+    position: absolute;
+    right: 35px;
+    top: 40px;
+}
+.modal-body {
+  padding: 40px;
+  text-align: center;
+  padding-top: 0;
+  max-width: 450px;
+  margin: auto;
+}
+.popupWrp p {
+  font-weight: 600;
+}
+
+.popupWrp p a {
+  text-decoration: underline;
+  color: #860016;
+}
+
+.popupWrp form label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+}
+
+.popupWrp form label input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-color: #042A2B;
+}
+
+.popupWrp form  button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  background: #042A2B;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.popupWrp form h5 {
+  margin: 20px 0;
+}
+
+.popupFormWrps {
+  background: rgba(4, 42, 43, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  max-width: 330px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.popupFormWrps a {
+  text-decoration: underline;
+  color: #860016;
+}
+div#doneModal .popupFormWrps{    
+  max-width: 360px;
+}
+div#newModal .popupWrp label {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+div#newModal .popupWrp label input {
+  height: 38px;
+  margin-left: 10px;
+}
+
+div#newModal .popupWrp button {
+  max-width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
