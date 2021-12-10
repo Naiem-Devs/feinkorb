@@ -411,7 +411,7 @@ a.addrss i {
  
 
 /* mobile-menu START */
-.mobile-menu {
+.mobile-menu,.dasboard-sidebar-menu {
   position: fixed;
   width: 320px;
   height: 100vh;
@@ -428,8 +428,38 @@ a.addrss i {
   color: #fff;
   padding-bottom: 30px;
 }
-.siteBar{
+.siteBar,.dasboard-sidebar-menu.active{
   margin-left: 0; 
+}
+.dasboard-sidebar-menu {
+  color: #042A2B;
+  background: #fff;
+}
+.dasboard_section_title h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dasboard_section_title h3 button.dmBtn {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 24px;
+  position: relative;
+  top: 3px;
+  display: none;
+}
+.dasboard-sidebar-menu button.dmBtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #042a2b;
+  font-size: 24px;
 }
 .mobile-menu ul#pills-tab {
   margin-top: 90px;
@@ -2656,13 +2686,14 @@ a.btn_card.inactive:hover {
 /* Tos pages End and Help-center Pages css Start ============================*/
 
 
+.header-two {
+  padding: 20px 0;
+  border-bottom: 2px solid #860016;
+}
 .header-two a.header-logo {
   display: flex;
   align-items: center;
   font-weight: 800;
-}
-.header-two {
-  padding: 20px 0;
 }
 .header-two a.header-logo img {
   max-width: 230px;

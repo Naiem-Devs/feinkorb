@@ -1034,7 +1034,9 @@ input {
 .help-center-contents {
     padding: 50px 0; 
 }
-
+.dasboard_section_title h3 button.dmBtn{
+    display: block;
+}
 
 
 
