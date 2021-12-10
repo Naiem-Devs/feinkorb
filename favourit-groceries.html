@@ -317,6 +317,7 @@
 
         </div> 
             
+        <!-- Card Lists -->
         <div class="card_list">
             <div class="card_list_t">
                 <h2>YOUR CART</h2>
@@ -329,9 +330,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -346,9 +348,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -363,9 +366,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -380,9 +384,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -498,7 +503,7 @@
                         <div class="dasboard-favourite-groceries">  
                             <div class="row">
                                 <div class="col-lg-3 col-md-6">
-                                    <div class="mf_food active">
+                                    <div class="mf_food">
                                         <div class="mf_food_blk">
                                             <span class="favourite_icon"><img src="assets/img/heart.png" alt=""></span>
                                             <i>
@@ -511,6 +516,11 @@
                                             </div>
                                         </div>
                                         <a href="#" class="btn_card">Add to Cart</a>
+                                        <div class="mf_food_add_card">
+                                            <button data-decrease>-</button>
+                                            <input data-value type="text" value="1" disabled />
+                                            <button data-increase>+</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
@@ -527,6 +537,11 @@
                                             </div>
                                         </div>
                                         <a href="#" class="btn_card">Add to Cart</a>
+                                        <div class="mf_food_add_card">
+                                            <button data-decrease>-</button>
+                                            <input data-value type="text" value="1" disabled />
+                                            <button data-increase>+</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
@@ -543,6 +558,11 @@
                                             </div>
                                         </div>
                                         <a href="#" class="btn_card">Add to Cart</a>
+                                        <div class="mf_food_add_card">
+                                            <button data-decrease>-</button>
+                                            <input data-value type="text" value="1" disabled />
+                                            <button data-increase>+</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
@@ -559,6 +579,11 @@
                                             </div>
                                         </div>
                                         <a href="#" class="btn_card">Add to Cart</a>
+                                        <div class="mf_food_add_card">
+                                            <button data-decrease>-</button>
+                                            <input data-value type="text" value="1" disabled />
+                                            <button data-increase>+</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -612,6 +637,7 @@
                     <div class="pay_card">
                         <h4>SHOP SECURELY, PAY QUICKLY. RECEIVE IMMEDIATELY</h4>
                         <ul>
+                            <li><a href="#"><img src="assets/img/paypal.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/visa.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/Mastercard.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/Amex.png" alt=""></a></li>
@@ -644,6 +670,7 @@
         <script src="assets/js/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/incriment.js"></script> 
  
     </body>
 </html>

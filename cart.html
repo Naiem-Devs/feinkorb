@@ -25,9 +25,9 @@
                 <div class="col-lg-12">
                     <div class="top_menu">
                         <ul>
-                            <li><a href="#">In-Store Prices</a></li>
-                            <li><a href="#">Doorstep Delivery in 30 Min</a></li>
-                            <li><a href="#">Multiple Shops, One Delivery</a></li>
+                            <li>In-Store Prices</li>
+                            <li>Doorstep Delivery in 30 Min</li>
+                            <li>Multiple Shops, One Delivery</li>
                             <li><a href="#">Contact & Help</a></li>
                         </ul>
                     </div>
@@ -215,6 +215,7 @@
 
         </div>
         
+        <!-- Card Lists -->
         <div class="card_list">
             <div class="card_list_t">
                 <h2>YOUR CART</h2>
@@ -227,9 +228,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -244,9 +246,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -261,9 +264,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -278,9 +282,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -354,7 +359,7 @@
                     <div class="col-lg-12">
                         <div class="all_cart_top">
                             <h3>Cart</h3>
-                            <a href="#" class="btn_card">cashout ></a>
+                            <!-- <a href="#" class="btn_card">cashout ></a> -->
                         </div>
                         <div class="carts">
                             <div class="thetble"> 
@@ -380,10 +385,35 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <div>
-                                                    <div class="ingredient-icon">
-                                                        <input type="text" value="4">
-                                                        <button><i class="fas fa-plus"></i></button>
+                                                <div> 
+                                                    <div class="mf_food_add_card">
+                                                        <button data-decrease>-</button>
+                                                        <input data-value type="text" value="1" disabled />
+                                                        <button data-increase>+</button>
+                                                    </div>
+                                                    <button type="button" class="removeProduct">X</button>
+                                                </div>
+                                            </td>
+                                            <td>2,99 € </td>
+                                            <td><b>2,99 €</b></td>
+                                        </tr>  
+                                        <tr>
+                                            <td>
+                                                <div class="productCartsDetails">
+                                                    <img src="assets/img/vagt-2.png" alt="">
+                                                    <div class="productDetails">
+                                                        <span>Mira Food Store</span>
+                                                        <h4>Koriander 50g</h4>
+                                                        <p>from Gaia</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div> 
+                                                    <div class="mf_food_add_card">
+                                                        <button data-decrease>-</button>
+                                                        <input data-value type="text" value="1" disabled />
+                                                        <button data-increase>+</button>
                                                     </div>
                                                     <button type="button" class="removeProduct">X</button>
                                                 </div>
@@ -403,10 +433,11 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <div>
-                                                    <div class="ingredient-icon">
-                                                        <input type="text" value="4">
-                                                        <button><i class="fas fa-plus"></i></button>
+                                                <div> 
+                                                    <div class="mf_food_add_card">
+                                                        <button data-decrease>-</button>
+                                                        <input data-value type="text" value="1" disabled />
+                                                        <button data-increase>+</button>
                                                     </div>
                                                     <button type="button" class="removeProduct">X</button>
                                                 </div>
@@ -426,33 +457,11 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <div>
-                                                    <div class="ingredient-icon">
-                                                        <input type="text" value="4">
-                                                        <button><i class="fas fa-plus"></i></button>
-                                                    </div>
-                                                    <button type="button" class="removeProduct">X</button>
-                                                </div>
-                                            </td>
-                                            <td>2,99 € </td>
-                                            <td><b>2,99 €</b></td>
-                                        </tr> 
-                                        <tr>
-                                            <td>
-                                                <div class="productCartsDetails">
-                                                    <img src="assets/img/vagt-2.png" alt="">
-                                                    <div class="productDetails">
-                                                        <span>Mira Food Store</span>
-                                                        <h4>Koriander 50g</h4>
-                                                        <p>from Gaia</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <div class="ingredient-icon">
-                                                        <input type="text" value="4">
-                                                        <button><i class="fas fa-plus"></i></button>
+                                                <div> 
+                                                    <div class="mf_food_add_card">
+                                                        <button data-decrease>-</button>
+                                                        <input data-value type="text" value="1" disabled />
+                                                        <button data-increase>+</button>
                                                     </div>
                                                     <button type="button" class="removeProduct">X</button>
                                                 </div>
@@ -466,10 +475,10 @@
                             <div class="intotal">
                                 <div class="intotal-left">
                                     <div class="deliverFeatures">
+                                        <input type="radio" id="test2" name="radio-group" checked>
+                                        <label for="test2">Standard Delivery</label> 
                                         <input type="radio" id="test" name="radio-group">
-                                        <label for="test">Pick Up</label> 
-                                        <input type="radio" id="test2" name="radio-group">
-                                        <label for="test2">Standard Delivery <span>-5 % Discount</span></label> 
+                                        <label for="test">Pick Up <span>-5 % Discount</span></label> 
                                         <input type="radio" id="test3" name="radio-group">
                                         <label for="test3">Same Day Any Time Delivery</label>   
                                     </div>
@@ -479,8 +488,8 @@
                                     <ul>
                                         <li><span>Total Price</span> <span>8,97 €</span></li>
                                         <li><span>Delivery</span> <span>3,00 €</span></li>
+                                        <li><span>Tip</span> <span>00,00 €</span></li>
                                         <li><span>Total Amount</span> <span>11,97 €</span></li>
-                                        <li><span>Total Price</span> <span>8,97 €</span></li>
                                         <li><span></span> <span>incl. VAT</span></li>
                                     </ul>
                                 </div>
@@ -501,51 +510,11 @@
         <section class="food-store">
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="mt-5">Often Bought Together With Your Item(s) </h4>
+                    </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="mf_food active">
-                            <div class="mf_food_rate">
-                                <a href="#">Mira Food Store</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>4.8/5</span>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="mf_food"> 
                             <div class="mf_food_blk">
                                 <span class="mffb">-20%</span>
                                 <i>
@@ -558,53 +527,15 @@
                                 </div>
                             </div>
                             <a href="#" class="btn_card">Add to Cart</a>
+                            <div class="mf_food_add_card">
+                                <button data-decrease>-</button>
+                                <input data-value type="text" value="1" disabled />
+                                <button data-increase>+</button>
+                            </div>
                         </div>
                     </div> 
                     <div class="col-lg-3 col-md-6">
-                        <div class="mf_food">
-                            <div class="mf_food_rate">
-                                <a href="#">Mira Food Store</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>4.8/5</span>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="mf_food"> 
                             <div class="mf_food_blk">
                                 <span class="mffb">-20%</span>
                                 <i>
@@ -617,53 +548,15 @@
                                 </div>
                             </div>
                             <a href="#" class="btn_card">Add to Cart</a>
+                            <div class="mf_food_add_card">
+                                <button data-decrease>-</button>
+                                <input data-value type="text" value="1" disabled />
+                                <button data-increase>+</button>
+                            </div>
                         </div>
                     </div> 
                     <div class="col-lg-3 col-md-6">
-                        <div class="mf_food">
-                            <div class="mf_food_rate">
-                                <a href="#">Mira Food Store</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>4.8/5</span>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="mf_food"> 
                             <div class="mf_food_blk">
                                 <span class="mffb">-20%</span>
                                 <i>
@@ -676,53 +569,15 @@
                                 </div>
                             </div>
                             <a href="#" class="btn_card">Add to Cart</a>
+                            <div class="mf_food_add_card">
+                                <button data-decrease>-</button>
+                                <input data-value type="text" value="1" disabled />
+                                <button data-increase>+</button>
+                            </div>
                         </div>
                     </div> 
                     <div class="col-lg-3 col-md-6">
-                        <div class="mf_food">
-                            <div class="mf_food_rate">
-                                <a href="#">Mira Food Store</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.375 7.91711H12.2188L10 0.942505L7.78125 7.91711H0.625L6.40625 12.2213L4.21875 19.1644L10 14.8603L15.7812 19.1644L13.5625 12.1898L19.375 7.91711Z" fill="#FFCE31"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>4.8/5</span>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="mf_food"> 
                             <div class="mf_food_blk">
                                 <span class="mffb">-20%</span>
                                 <i>
@@ -735,60 +590,17 @@
                                 </div>
                             </div>
                             <a href="#" class="btn_card">Add to Cart</a>
+                            <div class="mf_food_add_card">
+                                <button data-decrease>-</button>
+                                <input data-value type="text" value="1" disabled />
+                                <button data-increase>+</button>
+                            </div>
                         </div>
                     </div> 
                 </div> 
             </div>
         </section> 
-
-        <section class="service">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="sv_ttl">OUR PROMISES TO YOU</h2>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="service_wrp">
-                            <div class="service_blk">
-                                <i>
-                                    <img src="assets/img/sv1.png" alt="">
-                                </i>
-                                <h5>Quality Groceries</h5>
-                                <p>In our shop you will only find stores that meet our high standards.</p>
-                            </div>
-                            <div class="service_blk">
-                                <i>
-                                    <img src="assets/img/sv2.png" alt="">
-                                </i>
-                                <h5>Local</h5>
-                                <p>Our mission is to digitalize your local delis, to support them in the digitalized world.</p>
-                            </div>
-                            <div class="service_blk">
-                                <i>
-                                    <img src="assets/img/sv3.png" alt="">
-                                </i>
-                                <h5>In-Store Prices</h5>
-                                <p>In order to create an exceptional shopping experience, it is only fair to provide in-store prices.</p>
-                            </div>
-                            <div class="service_blk">
-                                <i>
-                                    <img src="assets/img/sv4.png" alt="">
-                                </i>
-                                <h5>Free Delivery <br> above 79€</h5>
-                                <p>The delivery fee are 3€. Above 79€ order value we deliver free of charge.</p>
-                            </div>
-                            <div class="service_blk">
-                                <i>
-                                    <img src="assets/img/sv5.png" alt="">
-                                </i>
-                                <h5>Sustainable</h5>
-                                <p>Our planet is important to us, that´s why we use emission-free delivery solutions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> 
+  
 
     </main>
 
@@ -832,6 +644,7 @@
                     <div class="pay_card">
                         <h4>SHOP SECURELY, PAY QUICKLY. RECEIVE IMMEDIATELY</h4>
                         <ul>
+                            <li><a href="#"><img src="assets/img/paypal.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/visa.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/Mastercard.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/Amex.png" alt=""></a></li>
@@ -864,6 +677,7 @@
         <script src="assets/js/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/incriment.js"></script>  
  
     </body>
 </html>

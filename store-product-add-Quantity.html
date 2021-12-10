@@ -318,6 +318,7 @@
 
         </div> 
 
+        <!-- Card Lists -->
         <div class="card_list">
             <div class="card_list_t">
                 <h2>YOUR CART</h2>
@@ -330,9 +331,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -347,9 +349,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -364,9 +367,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -381,9 +385,10 @@
                 <div class="card_cont">
                     <small>Mira Food Store</small>
                     <h4>Koriander 50g from Gaia</h4>
-                    <div class="add_num">
-                        <input type="text" value="1">
-                        <button>+</button>
+                    <div class="mf_food_add_card">
+                        <button data-decrease>-</button>
+                        <input data-value type="text" value="1" disabled />
+                        <button data-increase>+</button>
                     </div>
                 </div>
                 <div class="card_dp">
@@ -571,13 +576,13 @@
                                         <p>1-3 von 300 Products</p>
                                         <div class="select_box">
                                             <p class="srt_by">Sort by: </p>
-                                            <select id="select" style="display: none;">
+                                            <select id="select">
                                                 <option data-display="Popular">Popular</option>
                                                 <option value="1">Some option</option>
                                                 <option value="2">Another option</option>
                                                 <option value="3" disabled="">A disabled option</option>
                                                 <option value="4">Potato</option>
-                                              </select>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -588,7 +593,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="mf_food active">
+                                        <div class="mf_food">
                                             <div class="mf_food_blk">
                                                 <span class="mffb">-20%</span>
                                                 <i>
@@ -600,6 +605,7 @@
                                                     <p><span>2,99 €</span> <b>2,39 €</b></p>
                                                 </div>
                                             </div>
+                                            <a href="#" class="btn_card">Add to Cart</a>
                                             <div class="mf_food_add_card">
                                                 <button data-decrease>-</button>
                                                 <input data-value type="text" value="1" disabled />
@@ -619,7 +625,8 @@
                                                     <a href="#">Gaia</a>
                                                     <p>2,99 €</p>
                                                 </div>
-                                            </div>
+                                            </div> 
+                                            <a href="#" class="btn_card">Add to Cart</a>
                                             <div class="mf_food_add_card">
                                                 <button data-decrease>-</button>
                                                 <input data-value type="text" value="1" disabled />
@@ -639,6 +646,7 @@
                                                     <p>2,99 €</p>
                                                 </div>
                                             </div>
+                                            <a href="#" class="btn_card">Add to Cart</a>
                                             <div class="mf_food_add_card">
                                                 <button data-decrease>-</button>
                                                 <input data-value type="text" value="1" disabled />
@@ -658,6 +666,7 @@
                                                     <p>2,99 €</p> 
                                                 </div>
                                             </div>
+                                            <a href="#" class="btn_card">Add to Cart</a>
                                             <div class="mf_food_add_card">
                                                 <button data-decrease>-</button>
                                                 <input data-value type="text" value="1" disabled />
@@ -677,6 +686,7 @@
                                                     <p>2,99 €</p> 
                                                 </div>
                                             </div>
+                                            <a href="#" class="btn_card">Add to Cart</a>
                                             <div class="mf_food_add_card">
                                                 <button data-decrease>-</button>
                                                 <input data-value type="text" value="1" disabled />
@@ -696,6 +706,7 @@
                                                     <p>2,99 €</p> 
                                                 </div>
                                             </div>
+                                            <a href="#" class="btn_card">Add to Cart</a>
                                             <div class="mf_food_add_card">
                                                 <button data-decrease>-</button>
                                                 <input data-value type="text" value="1" disabled />
@@ -846,6 +857,7 @@
                     <div class="pay_card">
                         <h4>SHOP SECURELY, PAY QUICKLY. RECEIVE IMMEDIATELY</h4>
                         <ul>
+                            <li><a href="#"><img src="assets/img/paypal.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/visa.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/Mastercard.png" alt=""></a></li>
                             <li><a href="#"><img src="assets/img/Amex.png" alt=""></a></li>
@@ -880,7 +892,6 @@
         <script src="assets/js/owl.carousel.min.js"></script>  
         <script src="assets/js/jquery.nice-select.js"></script>  
         <script src="assets/js/main.js"></script>
-        <script src="assets/js/incriment.js"></script>
- 
+        <script src="assets/js/incriment.js"></script>  
     </body>
 </html>

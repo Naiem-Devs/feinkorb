@@ -1,11 +1,15 @@
 /*   Theme default css */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+main {
+  overflow: hidden;
+}
 :root{
   --thmColor: #042A2B;
   --redColor: #860016;
 }
-
+a:hover {
+  color: #860016;
+}
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -197,7 +201,18 @@ li {
   box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
 }
 
+/* stwitch css is end */
 
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: inherit;
+  box-shadow: none;
+}
+.accordion-button:focus { 
+  border: none;
+  outline: 0;
+  box-shadow: none;
+}
 
 /* default-css END 
 ================================== */
@@ -231,8 +246,7 @@ li#hd_mail a {
   font-weight: 600;
   display: flex;
   align-items: center;
-}
-
+} 
 .menu-area nav ul li a svg {
     margin-right: 15px;
 }
@@ -272,8 +286,7 @@ li#hd_mail a {
 .top_menu ul li {
   font-size: 18px;
   font-weight: 600;
-  text-decoration: underline;
-  cursor: pointer;
+  text-decoration: underline; 
 } 
 
 .top_menu:before {content: "";position: absolute;top: 0;left: 0;width: 100%;background: rgba(136, 149, 149, 0.1);height: 50px;z-index: -1;}
@@ -814,7 +827,7 @@ h2.sv_ttl {
 .help_link {
     color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -897,15 +910,14 @@ h2.sv_ttl {
     height: 100%;
 }
 .pay_card ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 .pay_card ul li a {
-  display: block;
-  width: 40px;
+  display: block; 
 }
 .pay_card ul li a img{
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 20px;
 }
 /* Footer Section End ============================*/
 
@@ -949,8 +961,16 @@ ul.star li {
     font-size: 24px;
     font-weight: 500;
 }
-.mf_food {max-width: 249px;padding:  0 15px;padding-bottom: 15px;position: relative;margin-bottom: 20px;transition: .3s;margin-top: 100px;width: 100%;}
-
+.mf_food {
+  max-width: 249px;
+  padding: 0 15px;
+  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 20px;
+  transition: .3s;
+  margin-top: 70px;
+  width: 100%;
+}
 .mf_food.active .mf_food_rate {
     opacity: 1;
 }
@@ -979,8 +999,19 @@ ul.star li {
 .mf_food.active a {
     opacity: 1;
 }
-.mf_food_rate {margin-bottom: 20px;position: absolute;top: -25%;opacity: 0;transition: .5s;}
-
+h5.all_product_title_small {
+  font-weight: 500;
+  border-bottom: 1px solid;
+  width: max-content;
+  margin-bottom: 0;
+}
+.mf_food_rate {
+  margin-bottom: 20px;
+  position: absolute;
+  top: -15%;
+  opacity: 0;
+  transition: .5s;
+}
 .mf_food_rate a {
     font-weight: 500;
     font-size: 18px;
@@ -1248,8 +1279,7 @@ section.food-store.store_info .mf_food_cont p {
     font-size: 18px;
 }
 section.food-store.store_info .mf_food{
-    max-width: 300px;
-    padding-bottom: 40px;
+    max-width: 300px; 
     transition: .3s;
 }
 
@@ -1310,7 +1340,15 @@ section.store-product section.food-store .container .mf_food {
 .mf_food.active .mf_food_add_card {
     opacity: 1;
 }
-
+.mf_food.show_quantity .mf_food_add_card{
+  display: flex;
+}
+.mf_food .mf_food_add_card{
+  display: none;
+}
+.mf_food.show_quantity a.btn_card{
+  display: none;
+}
 .mf_food:hover .mf_food_add_card {
     opacity: 1;
 }
@@ -1407,7 +1445,14 @@ a.stp_pagi_arrow{
 .card_cont h4 {
     font-size: 14px;
 }
+.card_cont .mf_food_add_card {
+  opacity: 1;
+}
 
+.card_cont .mf_food_add_card input {
+  width: 60px;
+  margin: 0 4px;
+}
 .card_cont small {
     font-size: 10px;
     font-weight: 300;
@@ -1631,7 +1676,10 @@ span#grb_price_span {
     font-weight: 500;
     margin: 5px 0;
 }
-
+.grb_Deliver li img {
+  height: 17px;
+  margin-left: 10px;
+}
 section#kdi .mf_food_cont p {
     font-size: 18px;
 }
@@ -1661,9 +1709,19 @@ section#kdi .mf_food a.btn_card {
     font-size: 24px;
     font-weight: 500;
 }
-
-.recomend_popup {width: 710px;position: fixed;background: white;margin: auto;left: 50%;top: 5%;padding: 40px;transform: translateX(-50%);z-index: 9;overflow: auto;height: 90vh;}
-
+.recomend_popup {
+  width: 710px;
+  position: fixed;
+  background: #f3f3f3;
+  margin: auto;
+  left: 50%;
+  top: 50px;
+  padding: 40px;
+  transform: translateX(-50%);
+  z-index: 9;
+  overflow: auto;
+  height: 90vh;
+}
 section.recomend_popup.this_hide {
     display: none;
 }
@@ -1699,7 +1757,18 @@ section.recomend_popup h2 {
 .rcmd_blk i img {
     width: 80px;
 }
+.rcmd_blk .mf_food_add_card {
+  display: none;
+}
 
+.rcmd_blk.show_quantity .mf_food_add_card {
+  display: flex;
+  opacity: 1;
+}
+
+.rcmd_blk.show_quantity  a {
+  display: none;
+}
 .rcmd_cont a {
     display: block;
     width: 150px;
@@ -1787,13 +1856,11 @@ section.CashOut_timeLine ul li span.active {
 .cashout_blk {
     margin-bottom: 100px;
 }
-
 .cashout_blk ul li {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
-
 .cashout_blk ul {
     margin-bottom: 20px;
 }
@@ -1870,6 +1937,13 @@ section.CashOut_timeLine ul li span.active {
 .Deliver_left h2 {
     font-size: 30px;
     margin-bottom: 40px;
+}
+.Deliver_left .dlry_btn a {
+  pointer-events: none;
+}
+
+.Deliver_left .dlry_btn a.active {
+  pointer-events: all;
 }
 .dlry_btn {display: flex;justify-content: space-between;align-items: center;margin-bottom: 60px;}
 
@@ -2037,7 +2111,13 @@ a.py_btn {text-align: center;width: 100%;border: none;background: var(--thmColor
 .your_order.cnfr {
     margin: unset;
 }
+.your_order.cnfr .total_order_blk p {
+  margin-bottom: 8px;
+}
 
+.your_order.cnfr .total_order_blk:last-child {
+  color: black;
+}
 .your_order h2 {
     font-size: 30px;
     margin: 25px 0 30px;
@@ -2167,6 +2247,10 @@ a.bta {
 section.section-About-recipe {
     margin-bottom: 50px;
 }
+.indian-dahl {
+  margin-bottom: 40px;
+  box-sizing: border-box; 
+}
 .indian-dahl h2{
   color:#042A2B;
   font-size: 30px;
@@ -2216,6 +2300,7 @@ section.section-About-recipe {
   height: 25px;
   margin-left: auto;
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .dahl-img-heart:hover{
@@ -2244,11 +2329,6 @@ section.section-About-recipe {
   font-weight: 700;
 }
 
-.indian-dahl {
-  margin-bottom: 40px;
-  box-sizing: border-box;
-  max-width: 530px;
-}
 
 
 
@@ -2263,7 +2343,16 @@ section.section-About-recipe {
   padding-bottom: 150px;
   margin-top: 50px;
 }
-
+.ingredient-table button.all_select {
+  display: block;
+  margin-left: auto;
+  border: 0;
+  padding: 0;
+  background: none;
+  outline: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
 section.indian-recipe-ingredients .row {
     justify-content: space-between;
 }
@@ -2291,8 +2380,11 @@ section.indian-recipe-ingredients .row {
   max-height: 400px;
   object-fit: cover;
   border-radius: 5px;
+  cursor: pointer;
 }
-
+.notClickAble{
+  pointer-events: none;
+}
 .ingredients-content .dahl-review{
   width: 100%;
 }
@@ -2302,7 +2394,16 @@ section.indian-recipe-ingredients .row {
   font-weight: 500;
   margin-top: 30px;
 }
+.ingredient-header .mf_food_add_card {
+  opacity: 1;
+  margin: 0;
+  margin-right: -15px;
+  margin-top: -9px;
+}
 
+.ingredient-header .mf_food_add_card input {
+  width: 60px;
+}
 .preparation{
   padding-bottom: 50px;
 }
@@ -2315,7 +2416,7 @@ section.indian-recipe-ingredients .row {
   margin-bottom: 15px;
 }
 .preparation ul{
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .preparation ul li{
@@ -2617,7 +2718,15 @@ a.like-icon {font-size: 14px;}
   text-align: center;
   border-bottom: 2px solid #042a2b2e;
 }
+.carts tbody tr td:nth-child(2) > div .mf_food_add_card {
+  opacity: 1;
+  margin: 0;
+  margin-right: 10px;
+}
 
+.carts tbody tr td:nth-child(2) > div .mf_food_add_card input {
+  width: 50px;
+}
 table {
   width: 100%;
 }
@@ -2674,9 +2783,12 @@ table {
 .carts tbody tr td:nth-child(2) > div > button.removeProduct {
   border: none;
   background: no-repeat;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: cursive;
+  font-size: 18px;
+  font-weight: 600; 
+}
+.deliverFeatures label span {
+  color: #860016;
+  font-size: 80%;
 }
 .intotal {
   display: flex;
@@ -2698,20 +2810,28 @@ table {
   display: flex;
   font-weight: 500;
 }
-
-.intotal-right li span:first-child {
-  width: 150px;
-  font-size: 15px;
-  margin-bottom: 10px;
+.dasboard-favourite-groceries .mf_food_add_card input {
+  width: 40px;
 }
-
+.intotal-right li span:first-child {
+  width: 130px;
+  font-size: 15px;
+  margin-bottom: 2px;
+  text-align: right;
+  margin-right: 30px;
+}
+.thetble {
+  margin-bottom: 20px;
+  overflow: auto;
+}
 .intotal-right li:nth-child(4) span {font-weight: 700;}
 .cartBottom {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(4, 42, 43, 0.1);
+  padding-bottom: 50px;
 }
-
 .cartBottom a {
   border-radius: 0;
 }
@@ -2803,14 +2923,15 @@ a.btn_card.inactive:hover {
 
 .paymentSupportBLk ul li {
   display: block;
+  margin-left: 10px;
 }
 
 .paymentSupportBLk ul li img {
   max-width: 45px;
 }
 
-.paymentSupportBLk ul li:nth-child(2) {
-  margin: 0 30px;
+.paymentSupportBLk ul li:first-child {
+  margin: 0;
 }
 
 .paymentSupportBLk h4 {
@@ -2821,7 +2942,7 @@ a.btn_card.inactive:hover {
 
 .mrDetails {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 60%;
 }
 
@@ -3001,6 +3122,7 @@ a.frut {
   position: absolute;
   top: 5px;
   right: 5px;
+  cursor: pointer;
 }
  
 
@@ -3115,10 +3237,13 @@ a.frut {
   background: #042A2B;
   color: #fff;
 }
-
+.changeCountry select{
+  -webkit-appearance: none;
+}
 .changeCountry {
   position: relative;
   width: 150px;
+  height: 42px;
   display: flex;
   align-items: center;
   border: 2px solid #042A2B;
@@ -3209,6 +3334,12 @@ a.frut {
   width: 31%;
   margin-bottom: 35px;
 }
+.filterNone:hover img {
+  filter: unset !important;
+}
+.helpOptions .help-single-blk:hover img {
+  filter: invert(1);
+}
 .helpOptions.second {
   justify-content: center;
 }
@@ -3234,12 +3365,33 @@ a.frut {
   border-bottom: 1px solid #042A2B;
   font-style: italic;
 }
-
+.faq-wrps button.accordion-button::after{
+  display: none;
+}
+.faq-wrps button.accordion-button,
 .faqBlk h4 {
   color: #860016;
   font-weight: 500;
+  font-size: 18px;
+  font-style: italic;
 }
-
+.faq-wrps .accordion-body {
+  padding: 0;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.payment_method .accordion-item{
+  border: none;
+  border-bottom: 1px solid rgba(4, 42, 43, 0.1);
+} 
+.accordion-item{
+  border-color:  #042A2B;
+}
+.faq-wrps .accordion-item button {
+  padding-left: 0;
+  padding-right: 0;
+}
 .faqBlk p:last-child {
   margin: 0;
 }
@@ -3297,6 +3449,17 @@ a.frut {
 .footer-two ul li {
   margin-right: 30px;
 }
+.footer-two ul li a:hover {
+  color: #fff;
+  opacity: .5;
+}
+
+
+
+
+
+
+
 /* Cart page End and Favourite Page css Start ============================*/
 /* Cart page End and Favourite Page css Start ============================*/
 /* Cart page End and Favourite Page css Start ============================*/

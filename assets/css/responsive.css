@@ -263,8 +263,7 @@ section.Deliver .row {
 
 .Deliver_left h2 {
     margin-bottom: 20px;
-}
-<<<<<<< HEAD
+} 
 .left-ingredients {
     max-width: 60%;
     flex: 0 0 59%;
@@ -297,9 +296,7 @@ section.Deliver .row {
     max-width: 450px;
     margin: auto;
 }
-.ingredient-table label.containerr {
-    transform: translate(58px, 5px);
-}
+ 
 section.Deliver.Confirmation .row {
     flex-direction: column;
 }
@@ -316,10 +313,9 @@ section.Deliver.Confirmation .row {
 .your_order.cnfr {
     margin: auto;
     margin-bottom: 50px;
-}
-=======
+} 
 .intotal { 
-    justify-content: center; 
+    justify-content: end; 
     flex-wrap: wrap;
     text-align: center;
 }
@@ -353,8 +349,7 @@ section.Deliver.Confirmation .row {
 
 
 
-
->>>>>>> 08309ca74ebcf5a7e2928e04a6aea283a11e099c
+ 
 
 }
 
@@ -599,10 +594,7 @@ section.Deliver.Confirmation .row {
     }
     .footer-top {
         padding: 60px 25px 30px;
-    }
-    .pay_card ul li a {
-        width: 60px;
-    }
+    } 
     .pay_card ul li {
         margin: 0 10px;
     }
@@ -934,7 +926,7 @@ a.wr_rev {
     .left-ingredients {flex: 0 0 100%;}
 
 .single-noodles img {
-    max-width: 175px;
+    max-width: 140px;
 }
 
 .noodles-review h3 {
@@ -1021,6 +1013,11 @@ span.stock {
     width: max-content;
     margin: auto;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.ingredient-header h3:first-child {
+    width: 100%;
+    margin-bottom: 20px;
 }
 .card_list.show {
     width: 100%;
@@ -1089,24 +1086,20 @@ a.frut {
 
 
     .intotal { 
-        justify-content: center; 
+        justify-content: end; 
         flex-wrap: wrap; 
     }
     .ingredient-icon input  { 
         height: 33px; 
         padding-bottom: 5px;
-    }
-    .thetble {
-        overflow: auto;
-    }
-    
+    }  
     .productCartsDetails img {
         margin: 0 20px;
         margin-left: 0;
     }
     
     .thetble table {
-        width: 500px;
+        width: 600px;
     }
     .deliverFeatures label { 
         font-size: 14px;
@@ -1249,12 +1242,28 @@ input {
 .dasboard_section_title h3 button.dmBtn{
     display: block;
 }
-
-
-
-
-
-
+.recomend_popup {
+    width: 450px; 
+}
+.mf_food_add_card input {
+    max-width: 90px; 
+}
+.rcmd_blk i img {
+    width: 70px;
+}
+section.recomend_popup h2 { 
+    font-size: 24px;
+}
+.rcmd_blk { 
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+section.recomend_popup a.close { 
+    right: 65px;
+    top: 10px;
+    width: 30px;
+    height: 30px; 
+}
 
 
 }
